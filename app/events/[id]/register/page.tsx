@@ -367,10 +367,10 @@ export default function RegistrationPage({ params }: PageProps) {
                                             {event.date}
                                         </span>
                                     )}
-                                    {event.time && (
+                                    {(event.reportingTime || event.time) && (
                                         <span className="flex items-center gap-1.5 text-[#F0E5D5]/80">
                                             <Clock className="w-3.5 h-3.5 text-[#B97843]" />
-                                            {event.time}
+                                            {event.reportingTime ? `Reporting: ${event.reportingTime}` : event.time}
                                         </span>
                                     )}
                                     {event.venue && (

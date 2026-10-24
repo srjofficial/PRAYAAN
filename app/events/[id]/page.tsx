@@ -150,12 +150,6 @@ export default function EventPage({ params }: PageProps) {
                                 <span className="font-space text-sm tracking-wider uppercase">{event.date}</span>
                             </div>
                         )}
-                        {event.time && (
-                            <div className="flex items-center gap-3 text-[#F0E5D5]/80">
-                                <Clock className="w-5 h-5 text-[#E7B878]" />
-                                <span className="font-space text-sm tracking-wider uppercase">{event.time}</span>
-                            </div>
-                        )}
                         {event.venue && (
                             <div className="flex items-center gap-3 text-[#F0E5D5]/80">
                                 <MapPin className="w-5 h-5 text-[#E7B878]" />
