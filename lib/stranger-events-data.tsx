@@ -141,8 +141,8 @@ export const eventsData: Record<string, EventData> = {
     },
     "treasure-hunt": {
         id: "treasure-hunt",
-        title: "Treasure Hunt (Tech Mystery Hunt)",
-        subtitle: "Follow the Clues, Claim the Chest",
+        title: "Tech Mystery Hunt",
+        subtitle: "Treasure Hunt",
         description: "Navigate the campus following a trail of cryptic clues, technical riddles, ciphers, and physical checkpoints. The sharpest team to crack every puzzle and reach the final destination wins.",
         image: "/images/events/strangerthings.jpeg",
         icon: <Map className="w-8 h-8 text-[#E7B878]" />,
@@ -166,6 +166,7 @@ export const eventsData: Record<string, EventData> = {
             <span key="8"><strong>Challenge Types:</strong> Ciphers, logic puzzles, audio/image clues, coding/debugging tasks, physical evidence collection, and final code-breaking.</span>,
             <span key="9"><strong>Hint System:</strong> Each team receives 3 Hint Tokens. Each requested hint carries a 5-point penalty. Tokens cannot be transferred.</span>,
             <span key="10"><strong>Safety & Conduct:</strong> No running in crowded areas; climbing walls, roofs, gates, or trees is forbidden; do not disrupt classes, staff, or other college activities.</span>,
+            <span key="fee"><strong>Registration Fee:</strong> ₹150 per team</span>,
             <span key="prize"><strong>Prize Pool:</strong> ₹6,000 total — First: ₹3,000 | Second: ₹2,000 | Third: ₹1,000</span>
         ]
     },

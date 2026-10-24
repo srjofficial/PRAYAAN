@@ -37,7 +37,7 @@ const events = [
     },
     {
         id: "treasure-hunt",
-        title: "Treasure Hunt (Tech Mystery Hunt)",
+        title: "Tech Mystery Hunt",
         description: "Navigate the campus following cryptic clues and technical riddles. The first team to crack every clue and reach the final destination wins.",
         image: "/images/events/strangerthings.jpeg",
         icon: <Map className="w-6 h-6 text-[#E7B878]" />
