@@ -41,7 +41,7 @@ export default function RegistrationPage({ params }: PageProps) {
 
     const calculateFee = () => {
         if (eventId === "website-60") {
-            return selectedTeamSize * 50; // ₹50 per head
+            return 100; // Flat ₹100 per team of 2
         }
         if (event?.registrationFee) {
             return parseInt(event.registrationFee, 10);
@@ -685,7 +685,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                         Total Amount Due: <span className="text-[#F0E5D5] font-black text-xl md:text-2xl drop-shadow-[0_0_10px_rgba(231,184,120,0.4)]">₹{calculateFee()}</span>
                                         {eventId === "website-60" && (
                                             <span className="ml-3 text-[#B97843] font-mono text-xs tracking-wider">
-                                                (Team of 2 — ₹50 per head)
+                                                (Team of 2 — ₹100 per team)
                                             </span>
                                         )}
                                     </p>

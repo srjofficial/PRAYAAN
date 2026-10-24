@@ -63,7 +63,7 @@ export const eventsData: Record<string, EventData> = {
         time: "9:30 AM to 12:00 PM",
         venue: "MCA Lab–3",
         registrationFee: "100",
-        feeLabel: "₹100 per team (2 members)",
+        feeLabel: "per team (2 members)",
         prizePool: "3750",
         minTeamSize: 2,
         maxTeamSize: 2,
@@ -78,6 +78,7 @@ export const eventsData: Record<string, EventData> = {
             <span key="7"><strong>Design Standards:</strong> Website must feature a clean layout, readable content, and a user-friendly, responsive design.</span>,
             <span key="8"><strong>Submission & Demo:</strong> Work must be submitted within the 60-minute limit (no late submissions). Each team must demonstrate their website to the judges.</span>,
             <span key="9"><strong>Regulations:</strong> Technical issues must be reported immediately to coordinators. The judges&apos; decision will be final and binding.</span>,
+            <span key="fee"><strong>Registration Fee:</strong> ₹100 per team (2 members)</span>,
             <span key="prize"><strong>Prize Pool:</strong> ₹3,750 total — First: ₹2,000 | Second: ₹1,000 | Third: ₹750</span>
         ]
     },
