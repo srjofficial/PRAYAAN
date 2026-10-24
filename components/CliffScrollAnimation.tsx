@@ -5,7 +5,7 @@
  *
  * Cinematic Auto-playing Hero Video for "Man on Cliff":
  * - Auto-plays high-definition video smoothly in the background
- * - Automatically selects /home/man-on-cliff.mp4 for desktop or /home/man-on-cliff-mobile.mp4 for mobile
+ * - Automatically selects /home/man-on-cliff.mp4 for desktop or /man-new-mobil.mp4 for mobile
  * - No scroll-lock or heavy frame scrubbing; scrolls naturally into the Events section
  */
 
@@ -52,7 +52,7 @@ export default function CliffScrollAnimation() {
                     className="w-full h-full object-cover"
                 >
                     <source
-                        src={isMobile ? "/man-on-cliff-mobile.mp4" : "/man-on-cliff.mp4"}
+                        src={isMobile ? "/man-new-mobil.mp4" : "/man-on-cliff.mp4"}
                         type="video/mp4"
                     />
                 </video>
