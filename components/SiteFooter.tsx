@@ -37,9 +37,14 @@ export default function Footer() {
                     </div>
 
                     {/* AMICA Section */}
-                    <div className="flex flex-col items-center text-center">
+                    <Link
+                        href="https://www.linkedin.com/posts/amica-sngce-mca-ugcPost-7519774591892799488-mwxa/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7519774593595793409&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAENbpPAB-Hv6B717qgxN4T4G-oDozpgsdQo&utm_campaign=whatsapp"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex flex-col items-center text-center group cursor-pointer"
+                    >
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="h-12 md:h-14 rounded-lg overflow-hidden flex items-center justify-center bg-white p-1 border border-[#B97843]/30 hover:scale-105 transition-transform duration-300">
+                            <div className="h-12 md:h-14 rounded-lg overflow-hidden flex items-center justify-center bg-white p-1 border border-[#B97843]/30 group-hover:scale-105 transition-transform duration-300">
                                 <img
                                     src="/home/amica-logo.jpg"
                                     alt="AMICA Logo"
@@ -47,13 +52,13 @@ export default function Footer() {
                                 />
                             </div>
                         </div>
-                        <p className="text-[#B97843] font-sans text-xs md:text-sm tracking-wide mb-3 font-semibold">
+                        <p className="text-[#B97843] font-sans text-xs md:text-sm tracking-wide mb-3 font-semibold group-hover:text-[#E7B878] transition-colors duration-300">
                             AMICA
                         </p>
-                        <span className="font-mono text-[10px] md:text-xs text-[#F0E5D5]/70 tracking-wider uppercase">
+                        <span className="font-mono text-[10px] md:text-xs text-[#F0E5D5]/70 tracking-wider uppercase group-hover:text-[#F0E5D5] transition-colors duration-300">
                             Association of MCA
                         </span>
-                    </div>
+                    </Link>
 
                     {/* NBA Section */}
                     <Link
@@ -94,8 +99,8 @@ export default function Footer() {
                 {/* Main Contacts */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 border-t border-[#342720] pt-10 mt-6">
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                        <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Sreehari M</h4>
-                        <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">CHAPTER ADVISOR</p>
+                        <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Srihari M</h4>
+                        <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">FACULTY ADVISOR</p>
                         <a href="tel:8078426026" className="font-space text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#E7B878] shadow-[0_0_8px_rgba(231,184,120,0.9)] animate-pulse" />
                             8078426026
@@ -103,7 +108,7 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-col items-center text-center">
                         <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Nimitha Mohan</h4>
-                        <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">CHAPTER ADVISOR</p>
+                        <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">FACULTY ADVISOR</p>
                         <a href="tel:8129212673" className="font-space text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#E7B878] shadow-[0_0_8px_rgba(231,184,120,0.9)] animate-pulse" />
                             8129212673

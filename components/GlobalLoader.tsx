@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import FloatingSpores from "./FloatingSpores";
-import { SymmetricWave } from "@/components/loading-ui/symmetric-wave";
+
 
 export default function GlobalLoader() {
     const [loading, setLoading] = useState(true);
@@ -57,9 +58,28 @@ export default function GlobalLoader() {
                                 className="absolute inset-0 bg-[#E7B878] blur-[40px] rounded-full z-0 pointer-events-none"
                             />
 
-                            <div className="relative z-10 py-4 px-6">
-                                <SymmetricWave height={56} count={9} />
-                            </div>
+                            {/* Rotating Subtle Celestial Ring */}
+                            <motion.div
+                                animate={{ rotate: 360 }}
+                                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                                className="absolute -inset-3 rounded-full border border-dashed border-[#E7B878]/30 pointer-events-none"
+                            />
+
+                            {/* Round Emblem / Logo Container */}
+                            <motion.div
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                animate={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.6, ease: "easeOut" }}
+                                className="relative z-10 w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-2 border-[#E7B878]/80 shadow-[0_0_35px_rgba(231,184,120,0.6),inset_0_0_15px_rgba(231,184,120,0.3)] bg-[#0B0B0D]"
+                            >
+                                <Image
+                                    src="/images/prayaan-logo.jpg"
+                                    alt="PRAYAAN Logo"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                            </motion.div>
                         </div>
 
                         {/* Elegant Progress Line */}

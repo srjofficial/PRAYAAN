@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     "PRAYAAN - National Level Intercollegiate Fest organized by MCA Department, Sree Narayana Gurukulam College of Engineering.",
 
   icons: {
-    icon: "/home/f12-logo.png",
-    shortcut: "/home/f12-logo.png",
-    apple: "/home/f12-logo.png",
+    icon: "/images/prayaan-logo.jpg",
+    shortcut: "/images/prayaan-logo.jpg",
+    apple: "/images/prayaan-logo.jpg",
   },
 }
 

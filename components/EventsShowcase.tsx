@@ -25,7 +25,7 @@ const events = [
         id: "ai-prompt-engineering",
         title: "AI Prompt Engineering",
         description: "Master the art of talking to AI. Craft precise, creative prompts to guide AI models — the sharpest minds craft the sharpest prompts.",
-        image: "/images/events/coderift.png",
+        image: "/images/events/aiprompt.jpg",
         icon: <Sparkles className="w-6 h-6 text-[#E7B878]" />
     },
     {
@@ -39,7 +39,7 @@ const events = [
         id: "treasure-hunt",
         title: "Tech Mystery Hunt",
         description: "Navigate the campus following cryptic clues and technical riddles. The first team to crack every clue and reach the final destination wins.",
-        image: "/images/events/strangerthings.jpeg",
+        image: "/images/events/treasurehunt.jpg",
         icon: <Map className="w-6 h-6 text-[#E7B878]" />
     },
     {
@@ -53,14 +53,14 @@ const events = [
         id: "spot-choreo",
         title: "Spot Choreo",
         description: "No prep, no rehearsals — just raw talent and rhythm. Get a random song on the spot and deliver an impromptu performance that wows the crowd.",
-        image: "/images/events/football.png",
+        image: "/images/events/spotchoreo.jpg",
         icon: <Music className="w-6 h-6 text-[#E7B878]" />
     },
     {
         id: "reel-making",
         title: "Reel Making",
         description: "Turn fest moments into cinematic gold. Capture the energy, atmosphere, and buzz of PRAYAAN in a creative 30–60 second short-form reel.",
-        image: "/images/events/reelmaking.jpg",
+        image: "/images/events/reelmaking.png",
         icon: <Clapperboard className="w-6 h-6 text-[#E7B878]" />
     }
 ];

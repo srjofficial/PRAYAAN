@@ -12,6 +12,7 @@ export async function GET(request: Request) {
         "ai-prompt-engineering": "ai-prompt-engineering.jpeg",
         "tech-charades": "tech-charades.jpeg",
         "treasure-hunt": "treasure-hunt.jpeg",
+        "spot-choreo": "spot-choreo.jpeg",
         "reel-making": "reel-making.jpeg",
     };
 
