@@ -1,106 +1,105 @@
-# FUGENIZ 12th — IEEE CIS Student Branch Chapter, SNGCE
+# PRAYAAN 2026 — MCA Tech Fest | SNGCE
 
-> **An immersive, Stranger Things-themed event website** built for the 12th edition of FUGENIZ, the annual technical festival of the IEEE Computational Intelligence Society (CIS) Student Branch Chapter at Sree Narayana Gurukulam College of Engineering (SNGCE).
+> **An immersive, cinematic event portal** built for **PRAYAAN 2026**, the annual national technical festival hosted by the **Department of Computer Applications (MCA)** at **Sree Narayana Gurukulam College of Engineering (SNGCE)**, Kolenchery, Kerala.
 
----
-
-## 🌐 Live Preview
-
-The site is designed to be deployed on [Vercel](https://vercel.com). After cloning and configuring the environment variable, run `npm run dev` to view locally or push to Vercel for production.
+📅 **Event Date:** October 30, 2026  
+📍 **Venue:** SNGCE Campus, Kadayiruppu, Kolenchery, Ernakulam, Kerala  
+🔗 **Repository:** [https://github.com/srjofficial/prayan-2026](https://github.com/srjofficial/prayan-2026)
 
 ---
 
-## 🧠 Project Overview
+## 🌐 Live Preview & Hosting
 
-FUGENIZ 12th is a single-page web application with the following core sections:
+Designed for instant, high-performance deployment on **[Vercel](https://vercel.com)**:
+- Zero-config Next.js App Router deployment
+- Automatic Turbopack-optimized production builds
+- Integrated Google Sheets registration backend
 
-- **Loading Screen** — Animated IEEE CIS logo entry with a dark, atmospheric loader
-- **Apple-Style Scroll Animation** — Frame-by-frame image sequence (like Apple product reveals) controlled by scroll position using GSAP ScrollTrigger + Canvas
-- **IEEE CIS Chapter Title + MARCH 5 Glitch** — Glitch-effect text displayed throughout the scroll animation
-- **Events Showcase** — Interactive event cards for "Scan & Seek" and "Pixel Decode" with expandable mission guidelines
-- **Registration System** — Per-event registration forms with payment QR code, receipt upload, and Google Sheets backend via Apps Script
-- **Site Footer** — Community logos, social links, contact information, and organizer details
+---
+
+## ⚡ Core Features & Highlights
+
+- **Symmetric Wave Entry Loader** — High-performance audio-wave pulse loader setting the atmosphere.
+- **Cinematic "Man on Cliff" Scroll Animation** — 208 high-resolution WebP frames orchestrated via GSAP ScrollTrigger & Canvas, featuring dual responsive pipelines (landscape for desktop and focused portrait for mobile).
+- **Matched Hero Action CTAs** — Obsidian black & stellar gold synchronized buttons (`EXPLORE EVENTS →` and `REGISTER NOW →`) with smooth anchor scrolling.
+- **Interactive Fun Games Explorer** — Interactive selector showcasing the 5 mini-games (*വട്ടം മൂടാം, വട്ടത്തിലാകാം!*, *കാറ്റല്ല, പേപ്പറാ!*, *ബലൂൺ പോയാൽ കപ്പ് പോയി!*, *പൊട്ടുമോ ഇല്ലയോ?*, *പേനയ്ക്ക് കുപ്പിയോട് പ്രണയം*) with objectives, bulleted directives, pro-tips, and tiered pricing.
+- **8 Flagship Events with Event Guidelines**:
+  1. **Blind Typing Competition** — ₹40 / participant (Solo)
+  2. **Website in 60 Minutes** — ₹100 / team (2 members)
+  3. **AI Prompt Engineering** — ₹50 / participant (Solo)
+  4. **Tech Charades** — ₹100 / team (2 members)
+  5. **Tech Mystery Hunt** — ₹150 / team (2–3 members)
+  6. **Fun Games Arena** — ₹20 / game (All 5 Games Combo Pass: ₹100) • On-Spot Entry
+  7. **Spot Choreo** — ₹100 / head (Solo)
+  8. **Reel Making** — ₹100 / team (2 members)
+- **Automated Registration & Payments** — Per-event UPI payment QR lightbox, QR code download, image receipt upload verification, and live Google Sheets storage via Google Apps Script.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-fugeniz-12/
-├── app/                        # Next.js App Router pages
-│   ├── layout.tsx              # Root layout with fonts, metadata, GlobalLoader, SmoothScroll
-│   ├── page.tsx                # Main homepage (Hero + Scroll Anim + Events + Footer)
+prayan-2026/
+├── app/                        # Next.js App Router
+│   ├── layout.tsx              # Root layout, fonts, and global metadata
+│   ├── page.tsx                # Homepage (Hero + Cliff Animation + Events Showcase + Footer)
+│   ├── loading.tsx             # Global loading boundary
 │   ├── events/
 │   │   └── [id]/
-│   │       ├── page.tsx        # Individual event detail page
+│   │       ├── page.tsx        # Event details & Event Guidelines
 │   │       └── register/
-│   │           └── page.tsx    # Event registration form with file upload
+│   │           └── page.tsx    # Event registration form with QR payment & receipt upload
 │   └── api/
-│       └── register/
-│           └── route.ts        # API route — sends form data + receipt to Google Sheets
+│       ├── register/
+│       │   └── route.ts        # POST endpoint: writes registrations to Google Sheets
+│       └── download-qr/
+│           └── route.ts        # API endpoint for downloading event QR codes
 │
-├── components/                 # All React components
-│   ├── GlobalLoader.tsx        # Full-screen loading animation with IEEE CIS logo
-│   ├── SmoothScroll.tsx        # Lenis smooth scroll + GSAP ScrollTrigger integration
-│   ├── StrangerThingsHero.tsx  # Fixed navbar (Menu button only)
-│   ├── MenuButton.tsx          # Animated hamburger menu with nav overlay
-│   ├── TenaniScrollAnimation.tsx # Apple-style scroll sequence (canvas + GSAP)
-│   ├── EventsShowcase.tsx      # Events grid section
-│   ├── event-card.tsx          # Individual event card component
-│   ├── drishya-event-card.tsx  # Alternative event card variant
-│   ├── SiteFooter.tsx          # Footer with logos, socials, contacts
-│   ├── CustomCursor.tsx        # Custom red animated cursor
-│   ├── FloatingSpores.tsx      # Particle/spore atmosphere animation
-│   └── ...
+├── components/                 # React UI Components
+│   ├── CliffScrollAnimation.tsx# 208-frame Apple-style canvas scroll sequence
+│   ├── FunGamesShowcase.tsx    # 5 mini-games interactive tab explorer & fee tier cards
+│   ├── EventsShowcase.tsx      # All events showcase grid
+│   ├── SiteFooter.tsx          # College, department info, and campus directions
+│   ├── FloatingSpores.tsx      # Atmospheric spore particles
+│   ├── StrangerThingsHero.tsx  # Fixed navigation and festival title
+│   ├── ui/
+│   │   ├── shiny-button.tsx    # Animated metallic shimmer button
+│   │   └── ...                 # Radix UI primitives
+│   └── loading-ui/
+│       └── symmetric-wave.tsx  # Symmetric audio wave loader
 │
 ├── lib/
-│   ├── stranger-events-data.tsx # Event data (title, rules, fees, images)
-│   └── utils.ts                # Tailwind utility helper (cn)
-│
-├── hooks/
-│   └── use-mobile.tsx          # Hook to detect mobile breakpoint
+│   ├── stranger-events-data.tsx# Master event registry (fees, rules, timings, venues, QR codes)
+│   └── utils.ts                # Class merge utility (cn)
 │
 ├── public/
 │   ├── frames/
-│   │   ├── tenani/             # Desktop scroll animation frames (WebP images)
-│   │   └── tenani-mobile/      # Mobile scroll animation frames (WebP images)
-│   ├── home/                   # Static assets (logos, hero images, QR code)
-│   │   ├── cis.png             # IEEE CIS logo (used in loader)
-│   │   ├── f12-logo.png        # FUGENIZ 12 logo
-│   │   ├── ieee_sb_sngce_logo_png-1.png
-│   │   ├── scan-seek.png       # Event poster image
-│   │   ├── pixel-decode.png    # Event poster image
-│   │   └── upi-qr.jpg          # UPI payment QR code
-│   └── fonts/                  # Custom local fonts (Asoka, Creepster, Cinzel)
+│   │   ├── cliff-webp/         # Desktop landscape WebP frames (0001–0208)
+│   │   └── cliff-mobile-webp/  # Mobile portrait WebP frames (0001–0208)
+│   ├── images/
+│   │   ├── qr/                 # Official event payment QR codes
+│   │   └── events/             # High-res poster assets
+│   └── fonts/                  # Custom display typography
 │
-├── styles/
-│   └── globals.css             # Global CSS including glitch effect keyframes
-│
-├── .env.local                  # 🔑 Environment variables (see below)
-├── next.config.mjs             # Next.js configuration
-├── tailwind.config.ts          # Tailwind CSS configuration with custom fonts/colors
-├── tsconfig.json               # TypeScript config
-├── package.json                # Dependencies and scripts
-├── extract-frames.mjs          # Node script to extract desktop frames from a video
-└── extract-frames-mobile.mjs   # Node script to extract mobile frames from a video
+├── .env.example                # Template for environment variables
+├── package.json                # Project dependencies & scripts
+└── tailwind.config.ts          # Custom theme tokens & keyframe animations
 ```
 
 ---
 
-## ⚙️ Environment Variables
+## ⚙️ Environment Configuration
 
-Create a `.env.local` file in the project root (already included in this repo):
+Create a `.env.local` or `.env` file in the root directory:
 
 ```env
 GOOGLE_SHEET_URL="https://script.google.com/macros/s/YOUR_APPS_SCRIPT_DEPLOYMENT_ID/exec"
 ```
 
-### How to set up your own Google Sheet backend:
-1. Create a Google Sheet for collecting registrations.
-2. Go to **Extensions → Apps Script** and deploy a Web App that handles `POST` requests.
-3. Replace the `GOOGLE_SHEET_URL` value with your deployment URL.
-
-> ⚠️ The included URL in `.env.local` is the original deployment — it may still be active. If you want your own sheet, replace it.
+### Google Sheets Apps Script Setup:
+1. Create a Google Sheet to record registrations.
+2. Open **Extensions → Apps Script** and deploy a Web App with `doPost(e)`.
+3. Set access to **"Anyone"** and copy the deployment URL into `GOOGLE_SHEET_URL`.
 
 ---
 
@@ -108,15 +107,15 @@ GOOGLE_SHEET_URL="https://script.google.com/macros/s/YOUR_APPS_SCRIPT_DEPLOYMENT
 
 ### Prerequisites
 
-- **Node.js** v18+ 
-- **npm** (or pnpm/yarn)
+- **Node.js** v18 or higher
+- **npm**, **pnpm**, or **yarn**
 
-### Installation
+### Local Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/srjofficial/fugeniz-12.git
-cd fugeniz-12
+git clone https://github.com/srjofficial/prayan-2026.git
+cd prayan-2026
 
 # Install dependencies
 npm install
@@ -125,70 +124,46 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-### Build for Production
+### Production Build
 
 ```bash
 npm run build
 npm run start
 ```
 
-### Deploy to Vercel
+---
 
-1. Push to GitHub (already done).
-2. Go to [vercel.com](https://vercel.com) → **New Project** → import this repo.
-3. Add the environment variable `GOOGLE_SHEET_URL` in Vercel project settings.
-4. Deploy!
+## ☁️ Deploying to Vercel
+
+1. Import the repository `srjofficial/prayan-2026` in the [Vercel Dashboard](https://vercel.com/new).
+2. Framework preset will automatically be set to **Next.js**.
+3. Under **Environment Variables**, add:
+   - **Key:** `GOOGLE_SHEET_URL`
+   - **Value:** Your Google Apps Script deployment URL
+4. Click **Deploy**.
 
 ---
 
-## 📦 Tech Stack & Libraries
+## 🛠️ Technology Stack
 
-| Category | Library / Tool | Version | Purpose |
-|---|---|---|---|
-| **Framework** | [Next.js](https://nextjs.org/) | 16.1.6 | React framework with App Router |
-| **Language** | TypeScript | 5.7.3 | Type-safe development |
-| **Styling** | Tailwind CSS | ^3.4 | Utility-first CSS framework |
-| **Animation** | [GSAP](https://gsap.com/) | ^3.14 | Scroll-driven canvas animation |
-| **Animation** | [Framer Motion](https://www.framer.com/motion/) | ^12.x | UI component animations |
-| **Smooth Scroll** | [Lenis](https://github.com/darkroomengineering/lenis) | ^1.3 | Smooth scroll + GSAP sync |
-| **UI Primitives** | [Radix UI](https://www.radix-ui.com/) | various | Accessible UI components |
-| **Icons** | [Lucide React](https://lucide.dev/) | ^0.544 | Icon set |
-| **Icons** | [React Icons](https://react-icons.github.io/react-icons/) | ^5.5 | Additional icons (FaInstagram, etc.) |
-| **Fonts** | Google Fonts (Cinzel, Space Grotesk, JetBrains Mono) | — | Typography |
-| **Fonts** | Local (Asoka, Creepster) | — | Custom display fonts |
+| Technology | Purpose |
+|---|---|
+| **Next.js 16** | React Framework with App Router & Turbopack |
+| **TypeScript** | Type-safe code architecture |
+| **Tailwind CSS** | Custom theme palette (Void Black, Stellar Gold, Solar Copper) |
+| **GSAP & ScrollTrigger** | High-performance frame-by-frame canvas scrubbing |
+| **Framer Motion** | Micro-interactions and animated UI cards |
+| **Lucide Icons** | Vector iconography |
 
 ---
 
-## 🎬 Scroll Animation — Frame Extraction
+## 🏛️ Organized By
 
-The Apple-style scroll animation uses a pre-extracted frame sequence (WebP images). If you want to regenerate frames from a video:
+**Department of Computer Applications (MCA)**  
+**Sree Narayana Gurukulam College of Engineering (SNGCE)**  
+Kolenchery, Ernakulam, Kerala – 682311
 
-```bash
-# Desktop frames (output to public/frames/tenani/)
-node extract-frames.mjs
-
-# Mobile frames (output to public/frames/tenani-mobile/)
-node extract-frames-mobile.mjs
-```
-
-> These scripts require **ffmpeg** to be installed and available in your PATH.
-
----
-
-## 🏛️ Organizers
-
-**IEEE Computational Intelligence Society Student Branch Chapter**  
-Sree Narayana Gurukulam College of Engineering (SNGCE)  
-Kolenchery, Kerala, India
-
-- 🌐 College: [sngce.ac.in](https://sngce.ac.in)
-- 🔗 LinkedIn: [IEEE CIS SNGCE](https://www.linkedin.com/company/ieee-cis-sngce/)
-- 📸 Instagram: [@ieee_sngce_cis](https://www.instagram.com/ieee_sngce_cis)
-
----
-
-## 📄 License
-
-This project is for educational and event-promotion purposes. All rights reserved by IEEE CIS Student Branch Chapter, SNGCE.
+- 🌐 College Website: [sngce.ac.in](https://sngce.ac.in)
+- 📍 Location: Kadayiruppu, Kolenchery, Kochi, Kerala
