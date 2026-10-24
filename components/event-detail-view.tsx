@@ -64,13 +64,13 @@ export default function EventDetailView({ event }: EventDetailViewProps) {
                             {/* 2. Category Tag */}
                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-sm border border-[#B97843]/30 bg-[#1B1A19]/80">
                                 <div className="w-1.5 h-1.5 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_6px_rgba(231,184,120,0.8)]" />
-                                <span className="text-[10px] font-mono tracking-[0.2em] text-[#F0E5D5]/80 uppercase">
+                                <span className="text-[10px] font-space tracking-[0.2em] text-[#F0E5D5]/80 uppercase font-bold">
                                     {event.category || "EVENT"} // {event.zoneTitle}
                                 </span>
                             </div>
 
                             {/* 3. Event Title */}
-                            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase text-[#F0E5D5] font-cinzel">
+                            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-wide leading-tight uppercase text-[#F0E5D5] font-title">
                                 {event.name}
                             </h1>
 
@@ -78,11 +78,11 @@ export default function EventDetailView({ event }: EventDetailViewProps) {
                             <div className="flex flex-wrap gap-6 md:gap-12 py-6 border-y border-[#342720]/80">
                                 <div className="flex items-center gap-3">
                                     <Calendar className="w-4 h-4 text-[#E7B878]" />
-                                    <span className="text-sm font-mono text-[#F0E5D5]/80 tracking-wide">{date}</span>
+                                    <span className="text-sm font-space text-[#F0E5D5]/80 tracking-wide">{date}</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <Clock className="w-4 h-4 text-[#E7B878]" />
-                                    <span className="text-sm font-mono text-[#F0E5D5]/80 tracking-wide">{time}</span>
+                                    <span className="text-sm font-space text-[#F0E5D5]/80 tracking-wide">{time}</span>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <MapPin className="w-4 h-4 text-[#E7B878]" />

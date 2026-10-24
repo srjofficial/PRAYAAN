@@ -4,7 +4,7 @@
 
 📅 **Event Date:** October 30, 2026  
 📍 **Venue:** SNGCE Campus, Kadayiruppu, Kolenchery, Ernakulam, Kerala  
-🔗 **Repository:** [https://github.com/srjofficial/prayan-2026](https://github.com/srjofficial/prayan-2026)
+🔗 **Repository:** [https://github.com/srjofficial/PRAYAAN](https://github.com/srjofficial/PRAYAAN)
 
 ---
 
@@ -39,7 +39,7 @@ Designed for instant, high-performance deployment on **[Vercel](https://vercel.c
 ## 📁 Project Structure
 
 ```
-prayan-2026/
+PRAYAAN/
 ├── app/                        # Next.js App Router
 │   ├── layout.tsx              # Root layout, fonts, and global metadata
 │   ├── page.tsx                # Homepage (Hero + Cliff Animation + Events Showcase + Footer)

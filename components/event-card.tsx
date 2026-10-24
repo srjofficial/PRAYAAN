@@ -98,7 +98,7 @@ export default function EventCard({
                                 initial: { x: 0 },
                                 hover: { x: 4 }
                             }}
-                            className="text-lg md:text-3xl lg:text-4xl font-black font-cinzel text-[#F0E5D5] uppercase leading-[0.9] tracking-tight"
+                            className="text-lg md:text-2xl lg:text-3xl font-semibold font-title text-[#F0E5D5] uppercase leading-tight tracking-wide"
                         >
                             {name}
                         </motion.h3>

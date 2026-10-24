@@ -87,7 +87,7 @@ export default function BodhiPage() {
                             {/* Year */}
                             <div className="flex items-center justify-center gap-3 md:gap-4 mt-3 md:mt-4">
                                 <span className="h-px w-6 md:w-8 bg-[#B97843]/40" />
-                                <p className="text-2xl sm:text-4xl md:text-6xl font-cinzel font-black text-[#E7B878]/30 tracking-tight">
+                                <p className="text-2xl sm:text-4xl md:text-5xl font-title font-semibold text-[#E7B878]/30 tracking-wider">
                                     2026
                                 </p>
                                 <span className="h-px w-6 md:w-8 bg-[#B97843]/40" />
@@ -96,7 +96,7 @@ export default function BodhiPage() {
 
                         {/* Description */}
                         <motion.p
-                            className="text-xs sm:text-sm md:text-base font-mono text-[#F0E5D5]/70 mt-12 md:mt-16 max-w-lg mx-auto leading-relaxed px-2"
+                            className="text-xs sm:text-sm md:text-base font-space text-[#F0E5D5]/70 mt-12 md:mt-16 max-w-lg mx-auto leading-relaxed px-2"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
@@ -211,7 +211,7 @@ export default function BodhiPage() {
                                         <div key={dept.id} className="relative group">
                                             <motion.div className="mb-12 pl-6 md:pl-10 border-l-2 border-[#B97843]/40 relative">
                                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#E7B878]/20 border border-[#E7B878]/50" />
-                                                <h2 className="text-3xl md:text-5xl lg:text-7xl font-cinzel font-black tracking-tight text-[#F0E5D5] uppercase">
+                                                <h2 className="text-2xl md:text-4xl lg:text-5xl font-title font-semibold tracking-wide text-[#F0E5D5] uppercase">
                                                     {dept.name}
                                                 </h2>
                                             </motion.div>
@@ -244,7 +244,7 @@ export default function BodhiPage() {
                                         <div key={zone.id} className="relative group">
                                             <motion.div className="mb-12 pl-6 md:pl-10 border-l-2 border-[#B97843]/40 relative">
                                                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#E7B878]/20 border border-[#E7B878]/50" />
-                                                <h2 className="text-3xl md:text-5xl lg:text-7xl font-cinzel font-black tracking-tight text-[#F0E5D5] uppercase">
+                                                <h2 className="text-2xl md:text-4xl lg:text-5xl font-title font-semibold tracking-wide text-[#F0E5D5] uppercase">
                                                     {zone.title}
                                                 </h2>
                                             </motion.div>

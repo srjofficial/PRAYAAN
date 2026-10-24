@@ -20,7 +20,7 @@ export default function PageHeader({ title, subtitle, description, backLink, bac
                 {backLink && (
                     <Link
                         href={backLink}
-                        className="inline-flex items-center gap-2 text-[10px] font-mono text-[#F0E5D5]/50 tracking-widest hover:text-[#E7B878] transition-colors mb-8"
+                        className="inline-flex items-center gap-2 text-[10px] font-space text-[#F0E5D5]/60 tracking-widest hover:text-[#E7B878] transition-colors mb-8 uppercase font-bold"
                     >
                         <ArrowLeft className="w-4 h-4 text-[#B97843]" />
                         {backLabel || "BACK"}
@@ -30,19 +30,19 @@ export default function PageHeader({ title, subtitle, description, backLink, bac
                 {/* Top label */}
                 <div className="flex items-center justify-center gap-3 mb-6">
                     <span className="h-px w-8 bg-[#B97843]/60" />
-                    <span className="text-[10px] md:text-xs font-mono tracking-[0.3em] text-[#E7B878] uppercase">
+                    <span className="text-[10px] md:text-xs font-space tracking-[0.3em] text-[#E7B878] uppercase font-bold">
                         {subtitle}
                     </span>
                     <span className="h-px w-8 bg-[#B97843]/60" />
                 </div>
 
                 {/* Main title */}
-                <h1 className="text-6xl md:text-[8rem] lg:text-[10rem] font-cinzel font-bold tracking-tight leading-none text-[#F0E5D5] drop-shadow-[0_0_35px_rgba(231,184,120,0.3)]">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-title font-semibold tracking-wider leading-none text-[#F0E5D5] drop-shadow-[0_0_35px_rgba(231,184,120,0.3)]">
                     {title}
                 </h1>
 
                 {/* Description */}
-                <p className="text-sm md:text-base font-mono text-[#F0E5D5]/70 mt-6 max-w-md mx-auto">
+                <p className="text-sm md:text-base font-space text-[#F0E5D5]/80 mt-6 max-w-md mx-auto leading-relaxed">
                     {description}
                 </p>
             </div>

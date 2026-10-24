@@ -26,11 +26,11 @@ export default function DrishyaPage() {
                     <div className="mb-12">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="h-px w-12 bg-[#B97843]/40" />
-                            <span className="text-[10px] font-mono text-[#E7B878] tracking-[0.3em] uppercase">
+                            <span className="text-[10px] font-space text-[#E7B878] tracking-[0.3em] uppercase font-bold">
                                 Day 01
                             </span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-cinzel font-bold tracking-tight text-[#F0E5D5]">
+                        <h2 className="text-2xl md:text-4xl font-title font-semibold tracking-wide text-[#F0E5D5]">
                             27 FEBRUARY 2026
                         </h2>
                     </div>
@@ -53,11 +53,11 @@ export default function DrishyaPage() {
                     <div className="mb-12">
                         <div className="flex items-center gap-3 mb-4">
                             <span className="h-px w-12 bg-[#B97843]/40" />
-                            <span className="text-[10px] font-mono text-[#E7B878] tracking-[0.3em] uppercase">
+                            <span className="text-[10px] font-space text-[#E7B878] tracking-[0.3em] uppercase font-bold">
                                 Day 02
                             </span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-cinzel font-bold tracking-tight text-[#F0E5D5]">
+                        <h2 className="text-2xl md:text-4xl font-title font-semibold tracking-wide text-[#F0E5D5]">
                             28 FEBRUARY 2026
                         </h2>
                     </div>

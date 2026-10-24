@@ -128,15 +128,15 @@ export default function FunGamesShowcase() {
                 <div>
                     <div className="flex items-center gap-3">
                         <Sparkles className="w-6 h-6 text-[#E7B878] animate-pulse" />
-                        <h3 className="font-cinzel text-2xl md:text-3xl text-[#E7B878] font-bold tracking-wider uppercase">
+                        <h3 className="font-title text-2xl md:text-3xl text-[#E7B878] font-semibold tracking-wider uppercase">
                             The 5 Mini-Games
                         </h3>
                     </div>
-                    <p className="font-mono text-xs md:text-sm text-[#F0E5D5]/70 mt-1">
+                    <p className="font-space text-xs md:text-sm text-[#F0E5D5]/70 mt-1">
                         Select any game below to explore its specific rules, objective, and how to win!
                     </p>
                 </div>
-                <div className="self-start sm:self-auto px-4 py-1.5 rounded-full bg-[#E7B878]/10 border border-[#E7B878]/40 text-[#E7B878] font-mono text-xs uppercase tracking-widest font-bold">
+                <div className="self-start sm:self-auto px-4 py-1.5 rounded-full bg-[#E7B878]/10 border border-[#E7B878]/40 text-[#E7B878] font-space text-xs uppercase tracking-widest font-bold">
                     ₹20 Per Game Entry
                 </div>
             </div>
@@ -157,7 +157,7 @@ export default function FunGamesShowcase() {
                             }`}
                         >
                             <div className="flex items-center justify-between w-full">
-                                <span className={`font-mono text-xs font-bold px-2 py-0.5 rounded-md ${
+                                <span className={`font-space text-xs font-bold px-2 py-0.5 rounded-md ${
                                     isSelected
                                         ? "bg-[#E7B878] text-[#0B0B0D]"
                                         : "bg-[#342720] text-[#E7B878]"
@@ -170,10 +170,10 @@ export default function FunGamesShowcase() {
                             </div>
 
                             <div>
-                                <div className="text-sm md:text-base font-bold text-[#F0E5D5] group-hover:text-[#E7B878] transition-colors leading-snug">
+                                <div className="font-space text-sm md:text-base font-bold text-[#F0E5D5] group-hover:text-[#E7B878] transition-colors leading-snug">
                                     {game.malayalamTitle}
                                 </div>
-                                <div className="font-mono text-[11px] text-[#B97843] uppercase tracking-wider mt-1">
+                                <div className="font-space text-[11px] text-[#B97843] uppercase tracking-wider mt-1 font-semibold">
                                     {game.englishTitle}
                                 </div>
                             </div>
@@ -210,44 +210,44 @@ export default function FunGamesShowcase() {
                             </div>
                             <div>
                                 <div className="flex items-center gap-2">
-                                    <span className="font-mono text-xs uppercase tracking-widest text-[#B97843] font-bold">
-                                        Game 0{currentGame.id}
-                                    </span>
-                                    <span className="text-[#F0E5D5]/40">•</span>
-                                    <span className="font-mono text-xs uppercase tracking-widest text-[#E7B878]">
-                                        {currentGame.englishTitle}
-                                    </span>
-                                </div>
-                                <h4 className="font-cinzel text-2xl md:text-3xl font-bold text-[#F0E5D5] mt-0.5">
-                                    {currentGame.malayalamTitle}
-                                </h4>
+                                     <span className="font-space text-xs uppercase tracking-widest text-[#B97843] font-bold">
+                                         Game 0{currentGame.id}
+                                     </span>
+                                     <span className="text-[#F0E5D5]/40">•</span>
+                                     <span className="font-space text-xs uppercase tracking-widest text-[#E7B878] font-semibold">
+                                         {currentGame.englishTitle}
+                                     </span>
+                                 </div>
+                                 <h4 className="font-title text-2xl md:text-3xl font-semibold text-[#F0E5D5] mt-0.5">
+                                     {currentGame.malayalamTitle}
+                                 </h4>
                             </div>
                         </div>
 
                         <div className="flex items-center gap-3">
                             <div className="px-4 py-2 rounded-xl bg-[#0B0B0D] border border-[#E7B878]/40 text-center">
-                                <span className="font-mono text-[10px] uppercase text-[#F0E5D5]/60 block tracking-wider">Entry Fee</span>
-                                <span className="font-sans font-bold text-lg text-[#E7B878]">{currentGame.fee}</span>
+                                <span className="font-space text-[10px] uppercase text-[#F0E5D5]/60 block tracking-wider">Entry Fee</span>
+                                <span className="font-space font-bold text-lg text-[#E7B878]">{currentGame.fee}</span>
                             </div>
                         </div>
                     </div>
 
                     {/* Objective Box */}
                     <div className="mb-6 p-4 rounded-xl bg-[#0B0B0D]/70 border border-[#B97843]/30">
-                        <span className="font-mono text-xs uppercase tracking-wider text-[#B97843] font-bold block mb-1">
+                        <span className="font-space text-xs uppercase tracking-wider text-[#B97843] font-bold block mb-1">
                             🎯 Objective:
                         </span>
-                        <p className="font-sans text-sm md:text-base text-[#F0E5D5]/90 leading-relaxed">
+                        <p className="font-space text-sm md:text-base text-[#F0E5D5]/90 leading-relaxed">
                             {currentGame.objective}
                         </p>
                     </div>
 
                     {/* Rules Bullet Points */}
                     <div className="mb-6">
-                        <span className="font-mono text-xs uppercase tracking-wider text-[#B97843] font-bold block mb-4">
+                        <span className="font-space text-xs uppercase tracking-wider text-[#B97843] font-bold block mb-4">
                             📜 Rules of the Game:
                         </span>
-                        <ul className="space-y-3 font-sans text-sm md:text-base text-[#F0E5D5]/85">
+                        <ul className="space-y-3 font-space text-sm md:text-base text-[#F0E5D5]/85">
                             {currentGame.rules.map((rule, rIdx) => (
                                 <li key={rIdx} className="flex items-start gap-3">
                                     <span className="text-[#E7B878] font-black text-sm mt-0.5 shrink-0">❯</span>
@@ -261,7 +261,7 @@ export default function FunGamesShowcase() {
                     {currentGame.tips && (
                         <div className="flex items-start gap-3 p-3.5 rounded-lg bg-[#E7B878]/10 border border-[#E7B878]/30">
                             <Sparkles className="w-5 h-5 text-[#E7B878] shrink-0 mt-0.5" />
-                            <div className="font-mono text-xs md:text-sm text-[#F0E5D5]/80">
+                            <div className="font-space text-xs md:text-sm text-[#F0E5D5]/80">
                                 <strong className="text-[#E7B878]">Pro Tip:</strong> {currentGame.tips}
                             </div>
                         </div>
@@ -273,30 +273,30 @@ export default function FunGamesShowcase() {
             <div className="p-6 rounded-2xl bg-gradient-to-r from-[#1B1A19] via-[#342720]/40 to-[#1B1A19] border border-[#B97843]/40">
                 <div className="flex items-center gap-3 mb-4">
                     <Ticket className="w-5 h-5 text-[#E7B878]" />
-                    <h5 className="font-cinzel text-lg font-bold text-[#E7B878] uppercase tracking-wider">
+                    <h5 className="font-title text-lg font-semibold text-[#E7B878] uppercase tracking-wider">
                         Play More, Win More — Participation Tier Fees
                     </h5>
                 </div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                     <div className="p-3 rounded-xl bg-[#0B0B0D]/70 border border-[#B97843]/30 text-center">
-                        <span className="font-mono text-[11px] text-[#F0E5D5]/60 block uppercase">1 Game</span>
-                        <span className="font-sans font-bold text-base text-[#F0E5D5]">₹20</span>
+                        <span className="font-space text-[11px] text-[#F0E5D5]/60 block uppercase">1 Game</span>
+                        <span className="font-space font-bold text-base text-[#F0E5D5]">₹20</span>
                     </div>
                     <div className="p-3 rounded-xl bg-[#0B0B0D]/70 border border-[#B97843]/30 text-center">
-                        <span className="font-mono text-[11px] text-[#F0E5D5]/60 block uppercase">2 Games</span>
-                        <span className="font-sans font-bold text-base text-[#F0E5D5]">₹40</span>
+                        <span className="font-space text-[11px] text-[#F0E5D5]/60 block uppercase">2 Games</span>
+                        <span className="font-space font-bold text-base text-[#F0E5D5]">₹40</span>
                     </div>
                     <div className="p-3 rounded-xl bg-[#0B0B0D]/70 border border-[#B97843]/30 text-center">
-                        <span className="font-mono text-[11px] text-[#F0E5D5]/60 block uppercase">3 Games</span>
-                        <span className="font-sans font-bold text-base text-[#F0E5D5]">₹60</span>
+                        <span className="font-space text-[11px] text-[#F0E5D5]/60 block uppercase">3 Games</span>
+                        <span className="font-space font-bold text-base text-[#F0E5D5]">₹60</span>
                     </div>
                     <div className="p-3 rounded-xl bg-[#0B0B0D]/70 border border-[#B97843]/30 text-center">
-                        <span className="font-mono text-[11px] text-[#F0E5D5]/60 block uppercase">4 Games</span>
-                        <span className="font-sans font-bold text-base text-[#F0E5D5]">₹80</span>
+                        <span className="font-space text-[11px] text-[#F0E5D5]/60 block uppercase">4 Games</span>
+                        <span className="font-space font-bold text-base text-[#F0E5D5]">₹80</span>
                     </div>
                     <div className="col-span-2 sm:col-span-1 p-3 rounded-xl bg-[#E7B878]/15 border border-[#E7B878]/60 text-center shadow-[0_0_15px_rgba(231,184,120,0.2)]">
-                        <span className="font-mono text-[11px] text-[#E7B878] block uppercase font-bold">All 5 Games Pass</span>
-                        <span className="font-sans font-bold text-base text-[#E7B878]">₹100</span>
+                        <span className="font-space text-[11px] text-[#E7B878] block uppercase font-bold">All 5 Games Pass</span>
+                        <span className="font-space font-bold text-base text-[#E7B878]">₹100</span>
                     </div>
                 </div>
             </div>

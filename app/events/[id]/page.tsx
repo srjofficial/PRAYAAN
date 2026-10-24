@@ -57,11 +57,11 @@ export default function EventPage({ params }: PageProps) {
             <nav className="relative z-50 w-full p-6 flex items-center justify-between">
                 <Link href="/" className="group flex items-center gap-2 text-[#F0E5D5]/60 hover:text-[#E7B878] transition-colors">
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                    <span className="font-mono text-sm uppercase tracking-widest">Back to Hub</span>
+                    <span className="font-space text-sm uppercase tracking-widest">Back to Hub</span>
                 </Link>
                 <div className="hidden md:flex items-center gap-2">
                     <span className="w-16 h-px bg-[#B97843]/50" />
-                    <span className="font-cinzel text-[#E7B878] tracking-widest text-sm">PRAYAAN</span>
+                    <span className="font-title text-[#E7B878] tracking-widest text-sm">PRAYAAN</span>
                 </div>
             </nav>
 
@@ -112,8 +112,8 @@ export default function EventPage({ params }: PageProps) {
                     </motion.div>
 
                     <div className="hidden lg:block space-y-4">
-                        <h3 className="font-cinzel text-2xl text-[#E7B878] tracking-widest font-bold">DIRECTIVE</h3>
-                        <p className="font-mono text-sm text-[#F0E5D5]/60 leading-relaxed max-w-md mb-6">
+                        <h3 className="font-title text-xl text-[#E7B878] tracking-widest font-semibold">DIRECTIVE</h3>
+                        <p className="font-space text-sm text-[#F0E5D5]/70 leading-relaxed max-w-md mb-6">
                             Precision, focus, and collaboration are essential. Look closely at the details; the keys to victory are forged in clarity.
                         </p>
 
@@ -133,11 +133,11 @@ export default function EventPage({ params }: PageProps) {
                             initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
                             animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                             transition={{ duration: 2, delay: 0.2, ease: "easeOut" }}
-                            className="font-cinzel text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#F0E5D5] via-[#E7B878] to-[#B97843] drop-shadow-[0_0_25px_rgba(231,184,120,0.5)] tracking-wider mb-4 leading-tight"
+                            className="font-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-[#F0E5D5] via-[#E7B878] to-[#B97843] drop-shadow-[0_0_20px_rgba(231,184,120,0.4)] tracking-wide mb-4 leading-tight"
                         >
                             {event.title}
                         </motion.h1>
-                        <h2 className="font-sans text-xl md:text-2xl text-[#B97843] font-bold uppercase tracking-[0.2em]">
+                        <h2 className="font-space text-xl md:text-2xl text-[#B97843] font-bold uppercase tracking-[0.2em]">
                             {event.subtitle}
                         </h2>
                     </div>
@@ -147,31 +147,31 @@ export default function EventPage({ params }: PageProps) {
                         {event.date && (
                             <div className="flex items-center gap-3 text-[#F0E5D5]/80">
                                 <Calendar className="w-5 h-5 text-[#E7B878]" />
-                                <span className="font-mono text-sm tracking-wider uppercase">{event.date}</span>
+                                <span className="font-space text-sm tracking-wider uppercase">{event.date}</span>
                             </div>
                         )}
                         {event.time && (
                             <div className="flex items-center gap-3 text-[#F0E5D5]/80">
                                 <Clock className="w-5 h-5 text-[#E7B878]" />
-                                <span className="font-mono text-sm tracking-wider uppercase">{event.time}</span>
+                                <span className="font-space text-sm tracking-wider uppercase">{event.time}</span>
                             </div>
                         )}
                         <div className="flex items-center gap-3 text-[#F0E5D5]/80">
                             <MapPin className="w-5 h-5 text-[#E7B878]" />
-                            <span className="font-mono text-sm tracking-wider uppercase">SNGCE Campus</span>
+                            <span className="font-space text-sm tracking-wider uppercase">SNGCE Campus</span>
                         </div>
                     </div>
 
                     {/* Description */}
                     <div className="mb-12 max-w-none">
-                        <p className="text-[#F0E5D5]/80 font-sans text-lg md:text-xl leading-relaxed">
+                        <p className="text-[#F0E5D5]/80 font-space text-lg md:text-xl leading-relaxed">
                             {event.description}
                         </p>
                     </div>
 
                     {/* Event Guidelines */}
                     <div className="mb-12">
-                        <h3 className="font-cinzel text-xl md:text-2xl text-[#E7B878] font-bold tracking-widest uppercase flex items-center gap-3 mb-6">
+                        <h3 className="font-title text-lg md:text-xl text-[#E7B878] font-semibold tracking-widest uppercase flex items-center gap-3 mb-6">
                             <div className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_10px_rgba(231,184,120,0.9)]" />
                             Event Guidelines
                         </h3>
@@ -179,10 +179,10 @@ export default function EventPage({ params }: PageProps) {
                         {eventId === "fun-games" && <FunGamesShowcase />}
 
                         <div className="p-6 md:p-8 bg-[#1B1A19] border border-[#B97843]/35 rounded-xl shadow-[inset_0_0_20px_rgba(52,39,32,0.4)]">
-                            <p className="text-[#B97843] font-mono text-sm tracking-widest uppercase mb-5 font-bold">
+                            <p className="text-[#B97843] font-space text-sm tracking-widest uppercase mb-5 font-bold">
                                 {eventId === "fun-games" ? "General Arena Rules & Guidelines:" : "Rules & Guidelines:"}
                             </p>
-                            <ul className="space-y-4 font-medium text-lg font-sans text-[#F0E5D5]/85">
+                            <ul className="space-y-4 font-medium text-lg font-space text-[#F0E5D5]/85">
                                 {event.rules ? (
                                     event.rules.map((rule, idx) => (
                                         <li key={idx} className="flex gap-4 items-start">
@@ -226,16 +226,16 @@ export default function EventPage({ params }: PageProps) {
                             <div className="flex flex-col items-center sm:items-start gap-2">
                                 {event.prizePool && (
                                     <div className="flex flex-col items-center sm:items-start gap-1 mb-4 pb-4 border-b border-[#B97843]/30 w-full">
-                                        <span className="text-[#B97843] font-mono text-xs md:text-sm uppercase tracking-[0.3em] font-bold">💰 Prize Pool</span>
-                                        <div className="text-[#E7B878] font-sans text-4xl md:text-6xl font-black tracking-tight drop-shadow-[0_0_15px_rgba(231,184,120,0.45)]">
+                                        <span className="text-[#B97843] font-space text-xs md:text-sm uppercase tracking-[0.3em] font-bold">💰 Prize Pool</span>
+                                        <div className="text-[#E7B878] font-space text-4xl md:text-6xl font-black tracking-tight drop-shadow-[0_0_15px_rgba(231,184,120,0.45)]">
                                             ₹{event.prizePool}
                                         </div>
                                     </div>
                                 )}
-                                <span className="text-[#F0E5D5]/60 font-mono text-xs md:text-sm uppercase tracking-[0.3em] font-bold">
+                                <span className="text-[#F0E5D5]/60 font-space text-xs md:text-sm uppercase tracking-[0.3em] font-bold">
                                     {event.isOnSpot ? "On-Spot Entry Fee" : "Registration Fee"}
                                 </span>
-                                <div className="text-[#F0E5D5] font-sans text-4xl md:text-6xl font-black tracking-tight">
+                                <div className="text-[#F0E5D5] font-space text-4xl md:text-6xl font-black tracking-tight">
                                     ₹{event.registrationFee || "100"} {event.feeLabel && <span className="text-2xl md:text-3xl font-bold text-[#F0E5D5]/70">{event.feeLabel}</span>}
                                 </div>
                             </div>
@@ -246,13 +246,13 @@ export default function EventPage({ params }: PageProps) {
                                         <Sparkles className="w-7 h-7 text-[#E7B878] animate-pulse" />
                                     </div>
                                     <div className="text-center sm:text-left">
-                                        <div className="inline-block px-3 py-1 rounded-full bg-[#E7B878]/15 border border-[#E7B878]/40 text-[#E7B878] font-mono text-xs uppercase tracking-widest font-bold mb-2">
+                                        <div className="inline-block px-3 py-1 rounded-full bg-[#E7B878]/15 border border-[#E7B878]/40 text-[#E7B878] font-space text-xs uppercase tracking-widest font-bold mb-2">
                                             Spot Entry Only
                                         </div>
-                                        <h4 className="font-cinzel text-2xl md:text-3xl font-black tracking-wider text-[#F0E5D5] uppercase">
+                                        <h4 className="font-title text-xl md:text-2xl font-semibold tracking-wider text-[#F0E5D5] uppercase">
                                             On-Spot Participation
                                         </h4>
-                                        <p className="font-mono text-sm text-[#F0E5D5]/75 mt-1 max-w-lg">
+                                        <p className="font-space text-sm text-[#F0E5D5]/80 mt-1 max-w-lg">
                                             No advance online registration required. Simply arrive at <span className="text-[#E7B878] font-bold">{event.venue || "the venue"}</span> during event hours to participate!
                                         </p>
                                     </div>

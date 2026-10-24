@@ -9,3 +9,7 @@ instrumentation-client.ts
 node_modules/
 .next/
 .DS_Store
+.env*.local
+.vscode/
+*.mjs
+

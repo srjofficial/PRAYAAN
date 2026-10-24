@@ -84,7 +84,7 @@ export default function MenuButton() {
                                         whileHover={{ scale: 1.08, x: 4 }}
                                         className="group cursor-pointer"
                                     >
-                                        <span className="font-cinzel text-xl text-[#F0E5D5] tracking-widest group-hover:text-[#E7B878] transition-colors duration-300 drop-shadow-[0_0_5px_rgba(231,184,120,0.5)]">
+                                        <span className="font-space text-lg text-[#F0E5D5] tracking-widest uppercase font-bold group-hover:text-[#E7B878] transition-colors duration-300 drop-shadow-[0_0_5px_rgba(231,184,120,0.5)]">
                                             {item.name}
                                         </span>
                                         <div className="h-[1.5px] w-0 group-hover:w-full bg-[#E7B878] transition-all duration-300 mt-1 mx-auto" />

@@ -44,7 +44,7 @@ export const ShinyButton = React.forwardRef<
       {...animationProps}
       {...(props as any)}
       className={cn(
-        "relative inline-flex items-center justify-center rounded-xl px-8 py-4 font-cinzel font-bold text-base md:text-lg uppercase tracking-[0.2em] backdrop-blur-xl transition-all duration-300 ease-in-out hover:shadow-[0_0_35px_rgba(231,184,120,0.45)] bg-[#1B1A19]/90 border border-[#B97843]/60 hover:border-[#E7B878] text-[#F0E5D5] hover:text-white disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer overflow-hidden group select-none",
+        "relative inline-flex items-center justify-center rounded-xl px-8 py-4 font-space font-bold text-base md:text-lg uppercase tracking-[0.18em] backdrop-blur-xl transition-all duration-300 ease-in-out hover:shadow-[0_0_35px_rgba(231,184,120,0.45)] bg-[#1B1A19]/90 border border-[#B97843]/60 hover:border-[#E7B878] text-[#F0E5D5] hover:text-white disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer overflow-hidden group select-none",
         className
       )}
     >

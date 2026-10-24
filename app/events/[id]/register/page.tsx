@@ -75,11 +75,11 @@ export default function RegistrationPage({ params }: PageProps) {
                 <nav className="relative z-50 w-full p-6 flex items-center justify-between">
                     <Link href={`/events/${eventId}`} className="group flex items-center gap-2 text-[#F0E5D5]/60 hover:text-[#E7B878] transition-colors">
                         <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                        <span className="font-mono text-sm uppercase tracking-widest">Back to Event</span>
+                        <span className="font-space text-sm uppercase tracking-widest">Back to Event</span>
                     </Link>
                     <div className="hidden md:flex items-center gap-2">
                         <span className="w-16 h-px bg-[#B97843]/50" />
-                        <span className="font-cinzel text-[#E7B878] tracking-widest text-sm">PRAYAAN</span>
+                        <span className="font-title text-[#E7B878] tracking-widest text-sm">PRAYAAN</span>
                     </div>
                 </nav>
 
@@ -95,11 +95,11 @@ export default function RegistrationPage({ params }: PageProps) {
                             <Sparkles className="w-10 h-10 text-[#E7B878] animate-pulse" />
                         </div>
 
-                        <span className="px-4 py-1.5 rounded-full bg-[#E7B878]/15 border border-[#E7B878]/50 text-[#E7B878] font-mono text-xs uppercase tracking-widest font-bold mb-4">
+                        <span className="px-4 py-1.5 rounded-full bg-[#E7B878]/15 border border-[#E7B878]/50 text-[#E7B878] font-space text-xs uppercase tracking-widest font-bold mb-4">
                             Spot Entry Only
                         </span>
 
-                        <h1 className="font-cinzel text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#F0E5D5] via-[#E7B878] to-[#B97843] mb-4">
+                        <h1 className="font-title text-2xl md:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-b from-[#F0E5D5] via-[#E7B878] to-[#B97843] mb-4">
                             {event.title}
                         </h1>
 
@@ -109,15 +109,15 @@ export default function RegistrationPage({ params }: PageProps) {
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full mb-8 text-left">
                             <div className="p-4 rounded-xl bg-[#0B0B0D]/70 border border-[#B97843]/30">
-                                <span className="font-mono text-xs uppercase text-[#B97843] block mb-1">Venue</span>
+                                <span className="font-space text-xs uppercase text-[#B97843] block mb-1">Venue</span>
                                 <span className="font-medium text-[#F0E5D5]">{event.venue || "Smart Class"}</span>
                             </div>
                             <div className="p-4 rounded-xl bg-[#0B0B0D]/70 border border-[#B97843]/30">
-                                <span className="font-mono text-xs uppercase text-[#B97843] block mb-1">Timing</span>
+                                <span className="font-space text-xs uppercase text-[#B97843] block mb-1">Timing</span>
                                 <span className="font-medium text-[#F0E5D5]">{event.time || "10:00 AM onwards"}</span>
                             </div>
                             <div className="p-4 rounded-xl bg-[#0B0B0D]/70 border border-[#B97843]/30">
-                                <span className="font-mono text-xs uppercase text-[#B97843] block mb-1">Spot Fee</span>
+                                <span className="font-space text-xs uppercase text-[#B97843] block mb-1">Spot Fee</span>
                                 <span className="font-medium text-[#E7B878]">₹{event.registrationFee} per head</span>
                             </div>
                         </div>
@@ -326,11 +326,11 @@ export default function RegistrationPage({ params }: PageProps) {
             <nav className="relative z-50 w-full p-6 flex items-center justify-between">
                 <Link href={`/events/${eventId}`} className="group flex items-center gap-2 text-[#F0E5D5]/60 hover:text-[#E7B878] transition-colors">
                     <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-                    <span className="font-mono text-sm uppercase tracking-widest">Return to Event</span>
+                    <span className="font-space text-sm uppercase tracking-widest">Return to Event</span>
                 </Link>
                 <div className="hidden md:flex items-center gap-2">
                     <span className="w-16 h-px bg-[#B97843]/50" />
-                    <span className="font-cinzel text-[#E7B878] tracking-widest text-sm">REGISTRATION PROTOCOL</span>
+                    <span className="font-title text-[#E7B878] tracking-widest text-sm">REGISTRATION PROTOCOL</span>
                 </div>
             </nav>
 
@@ -350,17 +350,17 @@ export default function RegistrationPage({ params }: PageProps) {
 
                             <div className="text-center mb-12">
                                 <motion.h1
-                                    className="font-cinzel text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#F0E5D5] via-[#E7B878] to-[#B97843] mb-4 tracking-wider"
+                                    className="font-title text-3xl md:text-4xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-[#F0E5D5] via-[#E7B878] to-[#B97843] mb-4 tracking-wider"
                                     animate={{ backgroundPosition: ["0%", "100%", "0%"] }}
                                     transition={{ duration: 10, repeat: Infinity }}
                                     style={{ backgroundSize: "200%", ...text3DStyle }}
                                 >
                                     REGISTRATION ENTRY
                                 </motion.h1>
-                                <p className="font-mono text-sm text-[#E7B878] tracking-[0.3em] uppercase mb-4" style={text3DStyle}>Event: {event.title}</p>
+                                <p className="font-space text-sm text-[#E7B878] tracking-[0.3em] uppercase mb-4" style={text3DStyle}>Event: {event.title}</p>
                                 
                                 {/* Date, Time & Venue info */}
-                                <div className="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-6 px-6 py-2.5 rounded-full border border-[#B97843]/40 bg-[#0B0B0D]/80 font-mono text-xs uppercase tracking-wider">
+                                <div className="inline-flex flex-wrap items-center justify-center gap-4 sm:gap-6 px-6 py-2.5 rounded-full border border-[#B97843]/40 bg-[#0B0B0D]/80 font-space text-xs uppercase tracking-wider">
                                     {event.date && (
                                         <span className="flex items-center gap-1.5 text-[#E7B878] font-bold">
                                             <Calendar className="w-3.5 h-3.5" />
@@ -389,7 +389,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                             {/* Participant Name */}
                                             <div className="space-y-4">
-                                                <label htmlFor="fullname" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                                <label htmlFor="fullname" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                     <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                     Participant Name
                                                 </label>
@@ -404,14 +404,14 @@ export default function RegistrationPage({ params }: PageProps) {
                                                         type="text"
                                                         autoComplete="name"
                                                         placeholder="Enter your full name"
-                                                        className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                        className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                     />
                                                 </div>
                                             </div>
 
                                             {/* College Name */}
                                             <div className="space-y-4">
-                                                <label htmlFor="college" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                                <label htmlFor="college" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                     <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                     College Name
                                                 </label>
@@ -426,14 +426,14 @@ export default function RegistrationPage({ params }: PageProps) {
                                                         type="text"
                                                         autoComplete="organization"
                                                         placeholder="Enter your college name"
-                                                        className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                        className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                     />
                                                 </div>
                                             </div>
 
                                             {/* Phone Number */}
                                             <div className={`space-y-4 ${eventId !== "blind-typing" ? "md:col-span-2" : ""}`}>
-                                                <label htmlFor="phone" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                                <label htmlFor="phone" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                     <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                     Phone Number
                                                 </label>
@@ -455,7 +455,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                                             e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 10);
                                                         }}
                                                         title="Please enter exactly 10 digits"
-                                                        className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                        className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                     />
                                                 </div>
                                             </div>
@@ -463,7 +463,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                             {/* Email ID (for Blind Typing) */}
                                             {eventId === "blind-typing" && (
                                                 <div className="space-y-4">
-                                                    <label htmlFor="email" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                                    <label htmlFor="email" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                         <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                         Email ID
                                                     </label>
@@ -478,7 +478,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                                             type="email"
                                                             autoComplete="email"
                                                             placeholder="Enter your email address"
-                                                            className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                            className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                         />
                                                     </div>
                                                 </div>
@@ -489,7 +489,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         {/* Team Name */}
                                         <div className="space-y-4">
-                                            <label htmlFor="teamName" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                            <label htmlFor="teamName" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                 <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                 Team Name
                                             </label>
@@ -504,14 +504,14 @@ export default function RegistrationPage({ params }: PageProps) {
                                                     type="text"
                                                     autoComplete="off"
                                                     placeholder="Enter your team name"
-                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                 />
                                             </div>
                                         </div>
 
                                         {/* No: of Team Members (Select option) */}
                                         <div className="space-y-4">
-                                            <label htmlFor="teamSize" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                            <label htmlFor="teamSize" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                 <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                 No: of Team Members
                                             </label>
@@ -525,7 +525,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                                     name="teamSize"
                                                     value={selectedTeamSize}
                                                     onChange={(e) => setSelectedTeamSize(parseInt(e.target.value, 10))}
-                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] font-cinzel text-lg tracking-widest rounded-t-lg appearance-none cursor-pointer"
+                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] font-space text-base tracking-wide rounded-t-lg appearance-none cursor-pointer"
                                                 >
                                                     {teamSizeOptions.map((count) => (
                                                         <option key={count} value={count} className="bg-[#1B1A19] text-[#F0E5D5] font-sans text-base">
@@ -541,7 +541,7 @@ export default function RegistrationPage({ params }: PageProps) {
 
                                         {/* Team Leader Name */}
                                         <div className="space-y-4">
-                                            <label htmlFor="fullname" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                            <label htmlFor="fullname" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                 <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                 Team Leader Name
                                             </label>
@@ -556,14 +556,14 @@ export default function RegistrationPage({ params }: PageProps) {
                                                     type="text"
                                                     autoComplete="name"
                                                     placeholder="Enter team leader full name"
-                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                 />
                                             </div>
                                         </div>
 
                                         {/* College Name */}
                                         <div className="space-y-4">
-                                            <label htmlFor="college" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                            <label htmlFor="college" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                 <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                 College Name
                                             </label>
@@ -578,14 +578,14 @@ export default function RegistrationPage({ params }: PageProps) {
                                                     type="text"
                                                     autoComplete="organization"
                                                     placeholder="Enter college name"
-                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                 />
                                             </div>
                                         </div>
 
                                         {/* Team Leader Phone Number */}
                                         <div className="space-y-4">
-                                            <label htmlFor="phone" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                            <label htmlFor="phone" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                 <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                 Team Leader Phone Number
                                             </label>
@@ -607,14 +607,14 @@ export default function RegistrationPage({ params }: PageProps) {
                                                         e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 10);
                                                     }}
                                                     title="Please enter exactly 10 digits"
-                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                 />
                                             </div>
                                         </div>
 
                                         {/* Team Leader Email */}
                                         <div className="space-y-4">
-                                            <label htmlFor="email" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                            <label htmlFor="email" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                 <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                 Team Leader Email
                                             </label>
@@ -629,7 +629,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                                     type="email"
                                                     autoComplete="email"
                                                     placeholder="leader@example.com"
-                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                    className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                 />
                                             </div>
                                         </div>
@@ -639,7 +639,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                             <div className="md:col-span-2 pt-6 border-t border-[#342720]/50 space-y-6">
                                                 <div className="flex items-center gap-3">
                                                     <span className="w-2.5 h-2.5 bg-[#E7B878] rounded-full animate-ping" />
-                                                    <h4 className="font-cinzel text-xl text-[#E7B878] font-bold tracking-widest uppercase">
+                                                    <h4 className="font-title text-lg text-[#E7B878] font-semibold tracking-widest uppercase">
                                                         Team Members Names
                                                     </h4>
                                                 </div>
@@ -648,7 +648,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                                         const memberNum = idx + 2;
                                                         return (
                                                             <div key={memberNum} className="space-y-4">
-                                                                <label htmlFor={`member_${memberNum}`} className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                                                <label htmlFor={`member_${memberNum}`} className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                                     <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                                     Member {memberNum} Name
                                                                 </label>
@@ -663,7 +663,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                                                         type="text"
                                                                         autoComplete="off"
                                                                         placeholder={`Enter member ${memberNum} name`}
-                                                                        className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-cinzel text-lg tracking-widest rounded-t-lg"
+                                                                        className="w-full bg-[#0B0B0D]/90 border-b-2 border-[#B97843]/40 px-10 py-5 focus:outline-none focus:border-[#E7B878] focus:bg-[#342720]/25 transition-all text-[#F0E5D5] placeholder:text-[#F0E5D5]/30 font-space text-base tracking-wide rounded-t-lg"
                                                                     />
                                                                 </div>
                                                             </div>
@@ -677,14 +677,14 @@ export default function RegistrationPage({ params }: PageProps) {
 
                                 {/* Payment Section */}
                                 <div className="mt-16 pt-8 border-t border-[#342720]/50 relative">
-                                    <h3 className="font-cinzel text-2xl md:text-3xl text-[#E7B878] mb-2 flex items-center gap-4 tracking-widest drop-shadow-[0_0_12px_rgba(231,184,120,0.3)]">
+                                    <h3 className="font-title text-2xl md:text-3xl text-[#E7B878] mb-2 flex items-center gap-4 tracking-widest drop-shadow-[0_0_12px_rgba(231,184,120,0.3)]">
                                         <QrCode className="w-8 h-8 opacity-80 text-[#B97843]" />
                                         PAYMENT PROTOCOL
                                     </h3>
-                                    <p className="text-[#F0E5D5]/70 font-mono text-xs md:text-sm uppercase tracking-widest mb-8">
+                                    <p className="text-[#F0E5D5]/70 font-space text-xs md:text-sm uppercase tracking-widest mb-8">
                                         Total Amount Due: <span className="text-[#F0E5D5] font-black text-xl md:text-2xl drop-shadow-[0_0_10px_rgba(231,184,120,0.4)]">₹{calculateFee()}</span>
                                         {eventId === "website-60" && (
-                                            <span className="ml-3 text-[#B97843] font-mono text-xs tracking-wider">
+                                            <span className="ml-3 text-[#B97843] font-space text-xs tracking-wider">
                                                 (Team of 2 — ₹100 per team)
                                             </span>
                                         )}
@@ -709,7 +709,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                             <button
                                                 type="button"
                                                 onClick={() => { window.location.href = QR_DOWNLOAD_URL; }}
-                                                className="relative z-10 mt-3 flex items-center justify-center gap-2 w-full py-2.5 rounded-lg border border-[#B97843]/40 bg-[#1B1A19] text-[#F0E5D5]/80 hover:text-[#F0E5D5] hover:border-[#E7B878] hover:bg-[#342720]/40 transition-all duration-300 font-mono text-xs uppercase tracking-widest group/dl"
+                                                className="relative z-10 mt-3 flex items-center justify-center gap-2 w-full py-2.5 rounded-lg border border-[#B97843]/40 bg-[#1B1A19] text-[#F0E5D5]/80 hover:text-[#F0E5D5] hover:border-[#E7B878] hover:bg-[#342720]/40 transition-all duration-300 font-space text-xs uppercase tracking-widest group/dl"
                                             >
                                                 <Download className="w-3.5 h-3.5 group-hover/dl:-translate-y-0.5 group-hover/dl:translate-x-0.5 transition-transform text-[#E7B878]" />
                                                 Download QR
@@ -719,7 +719,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                         <div className="flex-1 space-y-8 flex flex-col justify-center">
                                             <div className="space-y-3">
                                                 <div className="flex items-center justify-between">
-                                                    <label htmlFor="receipt" className="text-[#E7B878] font-mono text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
+                                                    <label htmlFor="receipt" className="text-[#E7B878] font-space text-[10px] sm:text-xs tracking-[0.2em] uppercase font-bold flex items-center gap-2">
                                                         <span className="w-2 h-2 bg-[#E7B878] rounded-full animate-pulse shadow-[0_0_8px_rgba(231,184,120,0.8)]" />
                                                         Upload Payment Receipt
                                                     </label>
@@ -742,17 +742,17 @@ export default function RegistrationPage({ params }: PageProps) {
                                                         {fileName ? (
                                                             <>
                                                                 <CheckCircle2 className="w-6 h-6 text-[#E7B878]" />
-                                                                <span className="text-[#E7B878] font-mono text-sm truncate max-w-[200px]">{fileName}</span>
+                                                                <span className="text-[#E7B878] font-space text-sm truncate max-w-[200px]">{fileName}</span>
                             </>
                                                         ) : (
                                                             <>
                                                                 <Upload className="w-6 h-6 text-[#B97843] group-hover:text-[#E7B878] transition-colors group-hover:-translate-y-1" />
-                                                                <span className="text-[#F0E5D5]/60 font-mono text-xs uppercase tracking-widest group-hover:text-[#F0E5D5] transition-colors">Choose File / Screenshot</span>
+                                                                <span className="text-[#F0E5D5]/60 font-space text-xs uppercase tracking-widest group-hover:text-[#F0E5D5] transition-colors">Choose File / Screenshot</span>
                                                             </>
                                                         )}
                                                     </label>
                                                 </div>
-                                                <p className="text-[#F0E5D5]/40 font-mono text-[10px] mt-2 uppercase tracking-wider">Max file size: 5MB</p>
+                                                <p className="text-[#F0E5D5]/40 font-space text-[10px] mt-2 uppercase tracking-wider">Max file size: 5MB</p>
                                             </div>
                                         </div>
                                     </div>
@@ -813,7 +813,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                 </div>
                             </motion.div>
 
-                            <div className="font-cinzel text-5xl md:text-7xl lg:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-[#F0E5D5] via-[#E7B878] to-[#B97843] font-bold mb-16 tracking-widest uppercase cursor-default select-none drop-shadow-[0_0_30px_rgba(231,184,120,0.4)]">
+                            <div className="font-title text-4xl md:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-[#F0E5D5] via-[#E7B878] to-[#B97843] font-semibold mb-16 tracking-widest uppercase cursor-default select-none drop-shadow-[0_0_30px_rgba(231,184,120,0.4)]">
                                 ENTRY CONFIRMED
                             </div>
 
@@ -919,11 +919,11 @@ export default function RegistrationPage({ params }: PageProps) {
                                     key={submittingState}
                                     initial={{ opacity: 0, y: 8 }}
                                     animate={{ opacity: 1, y: 0 }}
-                                    className="font-cinzel text-xl md:text-2xl text-[#F0E5D5] font-bold tracking-widest uppercase"
+                                    className="font-title text-lg md:text-xl text-[#F0E5D5] font-semibold tracking-widest uppercase"
                                 >
                                     {submittingState}
                                 </motion.p>
-                                <p className="font-mono text-xs text-[#F0E5D5]/60 tracking-wider uppercase">
+                                <p className="font-space text-xs text-[#F0E5D5]/60 tracking-wider uppercase">
                                     Processing your registration...
                                 </p>
                             </div>
@@ -935,7 +935,7 @@ export default function RegistrationPage({ params }: PageProps) {
                                     transition={{ duration: 1, repeat: Infinity }}
                                     className="w-2 h-2 rounded-full bg-[#E7B878] shrink-0"
                                 />
-                                <p className="font-mono text-xs text-[#E7B878] tracking-wider uppercase">
+                                <p className="font-space text-xs text-[#E7B878] tracking-wider uppercase">
                                     Do not close or refresh this window
                                 </p>
                             </div>

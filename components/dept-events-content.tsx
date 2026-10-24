@@ -49,18 +49,18 @@ export default function DeptEventsContent({ department, events }: DeptEventsCont
                     {/* Label */}
                     <div className="flex items-center justify-center gap-3 mb-6">
                         <span className="h-px w-12 bg-[#B97843]/40" />
-                        <span className="text-[10px] font-mono text-[#E7B878] tracking-[0.4em] uppercase">
+                        <span className="text-[10px] font-space text-[#E7B878] tracking-[0.4em] uppercase font-bold">
                             {department.name}
                         </span>
                         <span className="h-px w-12 bg-[#B97843]/40" />
                     </div>
 
                     {/* Big abbreviation */}
-                    <h1 className="text-5xl sm:text-7xl md:text-[10rem] lg:text-[12rem] font-cinzel font-black tracking-tighter leading-[0.85] text-[#F0E5D5] drop-shadow-[0_0_35px_rgba(231,184,120,0.3)]">
+                    <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-title font-semibold tracking-wider leading-[0.9] text-[#F0E5D5] drop-shadow-[0_0_35px_rgba(231,184,120,0.3)]">
                         {department.abbr}
                     </h1>
 
-                    <p className="text-xs md:text-sm font-mono text-[#F0E5D5]/60 mt-4 md:mt-6 max-w-md mx-auto">
+                    <p className="text-xs md:text-sm font-space text-[#F0E5D5]/70 mt-4 md:mt-6 max-w-md mx-auto">
                         {events.length} technical event{events.length !== 1 ? "s" : ""} to explore
                     </p>
                 </div>
@@ -73,11 +73,11 @@ export default function DeptEventsContent({ department, events }: DeptEventsCont
                     <div className="mb-8 md:mb-14">
                         <div className="flex items-center gap-3 mb-5">
                             <span className="h-px w-12 bg-[#B97843]/40" />
-                            <span className="text-[10px] font-mono text-[#E7B878] tracking-[0.3em] uppercase">
+                            <span className="text-[10px] font-space text-[#E7B878] tracking-[0.3em] uppercase font-bold">
                                 {events.length} Events
                             </span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-cinzel font-black tracking-tight text-[#F0E5D5]">
+                        <h2 className="text-2xl md:text-4xl font-title font-semibold tracking-wide text-[#F0E5D5]">
                             EVENTS
                         </h2>
                     </div>

@@ -10,7 +10,7 @@ export default function Footer() {
         <footer id="contact" className="relative w-full bg-[#0B0B0D] text-[#F0E5D5] border-t border-[#B97843]/20 overflow-hidden">
             {/* Large Background Text */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-[0.04]">
-                <h2 className="font-cinzel font-bold text-6xl md:text-8xl lg:text-[12rem] tracking-widest text-[#B97843] whitespace-nowrap drop-shadow-[0_0_25px_rgba(185,120,67,0.4)]">
+                <h2 className="font-title font-semibold text-5xl md:text-7xl lg:text-9xl tracking-[0.14em] text-[#B97843] whitespace-nowrap drop-shadow-[0_0_25px_rgba(185,120,67,0.4)]">
                     PRAYAAN
                 </h2>
             </div>
@@ -84,7 +84,7 @@ export default function Footer() {
                 <div className="flex items-center justify-center my-8">
                     <div className="flex items-center gap-4">
                         <span className="w-12 md:w-20 h-px bg-gradient-to-r from-transparent to-[#B97843]/60" />
-                        <div className="text-[#E7B878] font-cinzel font-bold text-3xl md:text-4xl tracking-widest drop-shadow-[0_0_15px_rgba(231,184,120,0.5)]">
+                        <div className="text-[#E7B878] font-title font-semibold text-2xl md:text-3xl tracking-[0.18em] drop-shadow-[0_0_15px_rgba(231,184,120,0.5)]">
                             PRAYAAN
                         </div>
                         <span className="w-12 md:w-20 h-px bg-gradient-to-l from-transparent to-[#B97843]/60" />
@@ -94,25 +94,25 @@ export default function Footer() {
                 {/* Main Contacts */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 border-t border-[#342720] pt-10 mt-6">
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                        <h4 className="font-cinzel text-[#E7B878] tracking-widest text-lg font-bold hover:text-[#F0E5D5] transition-colors">Sreehari M</h4>
-                        <p className="font-sans text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">CHAPTER ADVISOR</p>
-                        <a href="tel:8078426026" className="font-mono text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
+                        <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Sreehari M</h4>
+                        <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">CHAPTER ADVISOR</p>
+                        <a href="tel:8078426026" className="font-space text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#E7B878] shadow-[0_0_8px_rgba(231,184,120,0.9)] animate-pulse" />
                             8078426026
                         </a>
                     </div>
                     <div className="flex flex-col items-center text-center">
-                        <h4 className="font-cinzel text-[#E7B878] tracking-widest text-lg font-bold hover:text-[#F0E5D5] transition-colors">Nimitha Mohan</h4>
-                        <p className="font-sans text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">CHAPTER ADVISOR</p>
-                        <a href="tel:8129212673" className="font-mono text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
+                        <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Nimitha Mohan</h4>
+                        <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">CHAPTER ADVISOR</p>
+                        <a href="tel:8129212673" className="font-space text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#E7B878] shadow-[0_0_8px_rgba(231,184,120,0.9)] animate-pulse" />
                             8129212673
                         </a>
                     </div>
                     <div className="flex flex-col items-center md:items-end text-center md:text-right">
-                        <h4 className="font-cinzel text-[#E7B878] tracking-widest text-lg font-bold hover:text-[#F0E5D5] transition-colors">Aveen</h4>
-                        <p className="font-sans text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">STUDENT COORDINATOR</p>
-                        <a href="tel:8129244658" className="font-mono text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
+                        <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Aveen</h4>
+                        <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">STUDENT COORDINATOR</p>
+                        <a href="tel:8129244658" className="font-space text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#E7B878] shadow-[0_0_8px_rgba(231,184,120,0.9)] animate-pulse" />
                             8129244658
                         </a>
@@ -121,7 +121,7 @@ export default function Footer() {
 
                 {/* Website Developers */}
                 <div className="flex flex-col items-center border-t border-[#342720] pt-10 mb-10">
-                    <h4 className="font-cinzel text-sm tracking-widest text-[#F0E5D5]/60 uppercase mb-6">
+                    <h4 className="font-space text-sm tracking-widest text-[#F0E5D5]/60 uppercase mb-6 font-semibold">
                         Website Built By
                     </h4>
                     <div className="flex flex-wrap justify-center gap-6 md:gap-12">
@@ -133,7 +133,7 @@ export default function Footer() {
                             className="flex items-center gap-3 text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors duration-300 group"
                         >
                             <FaInstagram className="w-5 h-5 text-[#B97843] group-hover:text-[#E7B878] transition-colors" />
-                            <span className="font-cinzel tracking-wider text-sm md:text-base font-bold">Abinson Babu</span>
+                            <span className="font-space tracking-wider text-sm md:text-base font-bold">Abinson Babu</span>
                         </Link>
 
                         {/* Parthip Sasidharan */}
@@ -144,7 +144,7 @@ export default function Footer() {
                             className="flex items-center gap-3 text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors duration-300 group"
                         >
                             <FaInstagram className="w-5 h-5 text-[#B97843] group-hover:text-[#E7B878] transition-colors" />
-                            <span className="font-cinzel tracking-wider text-sm md:text-base font-bold">Parthip Sasidharan</span>
+                            <span className="font-space tracking-wider text-sm md:text-base font-bold">Parthip Sasidharan</span>
                         </Link>
 
                         {/* Saroj S */}
@@ -155,14 +155,14 @@ export default function Footer() {
                             className="flex items-center gap-3 text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors duration-300 group"
                         >
                             <FaInstagram className="w-5 h-5 text-[#B97843] group-hover:text-[#E7B878] transition-colors" />
-                            <span className="font-cinzel tracking-wider text-sm md:text-base font-bold">Saroj S</span>
+                            <span className="font-space tracking-wider text-sm md:text-base font-bold">Saroj S</span>
                         </Link>
                     </div>
                 </div>
 
                 {/* Copyright */}
                 <div className="text-center">
-                    <p className="font-mono text-xs text-[#F0E5D5]/50">
+                    <p className="font-space text-xs text-[#F0E5D5]/50">
                         © 2026 Prayaan. All rights reserved. SNGCE MCA Department.
                     </p>
                 </div>

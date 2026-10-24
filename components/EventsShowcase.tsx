@@ -135,10 +135,10 @@ export default function EventsShowcase() {
                     transition={{ duration: 1 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="font-cinzel text-5xl md:text-7xl font-bold text-[#E7B878] drop-shadow-[0_0_25px_rgba(231,184,120,0.5)] mb-4 tracking-wider">
+                    <h2 className="font-title text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-[#E7B878] drop-shadow-[0_0_20px_rgba(231,184,120,0.4)] mb-4 tracking-[0.14em] uppercase">
                         FEATURED EVENTS
                     </h2>
-                    <p className="font-mono text-[#F0E5D5]/70 max-w-2xl mx-auto text-sm md:text-base tracking-[0.2em] uppercase">
+                    <p className="font-space text-[#F0E5D5]/70 max-w-2xl mx-auto text-sm md:text-base tracking-[0.2em] uppercase">
                         CHALLENGE THE REALM. COMPETE. TRIUMPH.
                     </p>
                 </motion.div>
@@ -283,11 +283,11 @@ export default function EventsShowcase() {
                                                 </div>
                                                 <div className="flex flex-col">
                                                     {event.id === "fun-games" && (
-                                                        <span className="self-start px-2.5 py-0.5 rounded-full text-[10px] font-mono tracking-widest uppercase bg-[#E7B878]/15 border border-[#E7B878]/50 text-[#E7B878] font-bold mb-1">
+                                                        <span className="self-start px-2.5 py-0.5 rounded-full text-[10px] font-space tracking-widest uppercase bg-[#E7B878]/15 border border-[#E7B878]/50 text-[#E7B878] font-bold mb-1">
                                                             On-Spot Participation
                                                         </span>
                                                     )}
-                                                    <h3 className="font-cinzel text-3xl md:text-4xl font-bold">
+                                                    <h3 className="font-title text-2xl md:text-3xl font-semibold tracking-wide">
                                                     <span className="card-title-track inline-flex flex-wrap gap-x-2.5">
                                                         {words.map((word, wIdx) => (
                                                             <span
@@ -314,12 +314,12 @@ export default function EventsShowcase() {
                                                 </div>
                                             </div>
 
-                                            <p className="text-[#F0E5D5]/75 font-sans text-sm md:text-base leading-relaxed mb-8">
+                                            <p className="text-[#F0E5D5]/75 font-space text-sm md:text-base leading-relaxed mb-8">
                                                 {event.description}
                                             </p>
 
                                             <div className="self-start relative">
-                                                <div className="card-action-btn flex items-center gap-4 px-8 py-4 bg-[#E7B878] text-[#0B0B0D] font-cinzel font-black uppercase tracking-[0.2em] rounded-full shadow-[0_0_20px_rgba(231,184,120,0.35)]">
+                                                <div className="card-action-btn flex items-center gap-4 px-8 py-4 bg-[#E7B878] text-[#0B0B0D] font-space font-bold uppercase tracking-[0.15em] rounded-full shadow-[0_0_20px_rgba(231,184,120,0.35)]">
                                                     <span className="text-lg md:text-xl">Uncover Secrets</span>
                                                     <ArrowRight className="card-arrow-icon w-6 h-6 stroke-[3]" />
                                                 </div>

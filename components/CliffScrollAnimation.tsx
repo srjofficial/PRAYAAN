@@ -52,7 +52,7 @@ export default function CliffScrollAnimation() {
                     className="w-full h-full object-cover"
                 >
                     <source
-                        src={isMobile ? "/home/man-on-cliff-mobile.mp4" : "/home/man-on-cliff.mp4"}
+                        src={isMobile ? "/man-on-cliff-mobile.mp4" : "/man-on-cliff.mp4"}
                         type="video/mp4"
                     />
                 </video>
@@ -65,8 +65,8 @@ export default function CliffScrollAnimation() {
             {/* Custom Styles for Typography & Animations */}
             <style jsx global>{`
               .prayaan-wordmark {
-                font-family: var(--font-cinzel), serif;
-                font-weight: 900;
+                font-family: var(--font-orbitron), sans-serif;
+                font-weight: 600;
                 background: linear-gradient(
                   180deg,
                   #FFFFFF 0%,
@@ -154,13 +154,13 @@ export default function CliffScrollAnimation() {
                     transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
                     className="w-full max-w-5xl mx-auto flex flex-col items-center justify-center text-center my-auto px-2"
                 >
-                    {/* Monumental PRAYAAN wordmark */}
-                    <h1 className="prayaan-wordmark text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] tracking-[0.25em] sm:tracking-[0.35em] md:tracking-[0.45em] lg:tracking-[0.52em] select-none leading-none pl-[0.25em] sm:pl-[0.35em] md:pl-[0.45em] lg:pl-[0.52em]">
+                    {/* Monumental PRAYAAN wordmark in Orbitron SemiBold */}
+                    <h1 className="prayaan-wordmark text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[8rem] tracking-[0.14em] sm:tracking-[0.18em] md:tracking-[0.22em] select-none leading-none pl-[0.14em] sm:pl-[0.18em] md:pl-[0.22em]">
                         PRAYAAN
                     </h1>
 
                     {/* TECH FEST beneath PRAYAAN */}
-                    <div className="tech-fest-subtitle text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.55em] sm:tracking-[0.75em] md:tracking-[0.95em] mt-3 sm:mt-5 select-none pl-[0.55em] sm:pl-[0.75em] md:pl-[0.95em]">
+                    <div className="tech-fest-subtitle text-xs sm:text-sm md:text-base lg:text-lg tracking-[0.45em] sm:tracking-[0.65em] md:tracking-[0.8em] mt-3 sm:mt-5 select-none pl-[0.45em] sm:pl-[0.65em] md:pl-[0.8em]">
                         TECH FEST
                     </div>
 

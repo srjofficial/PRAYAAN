@@ -41,7 +41,14 @@
     --cosmic-navy: #101B2B;
     --nebula-blue: #283C55;
     --nebula-violet: #68465D;
+
+    /* Main Title Font: Orbitron (Sleek Geometric Tech Font) */
+    --font-title: var(--font-orbitron), sans-serif;
   }
+}
+
+.font-title {
+  font-family: var(--font-orbitron), sans-serif;
 }
 
 @layer base {
