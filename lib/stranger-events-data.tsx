@@ -112,7 +112,7 @@ export const eventsData: Record<string, EventData> = {
     "tech-charades": {
         id: "tech-charades",
         title: "Tech Charades",
-        subtitle: "Act It Out, Tech It Up",
+        subtitle: "MCA Tech Fest",
         description: "Guess the tech term, algorithm, or gadget from your teammate's acting alone — no speaking allowed! A hilarious, fast-paced fusion of technology and charades.",
         image: "/images/events/quirkquest.jpeg",
         icon: <MessageSquare className="w-8 h-8 text-[#E7B878]" />,
@@ -123,7 +123,7 @@ export const eventsData: Record<string, EventData> = {
         feeLabel: "per team",
         prizePool: "3500",
         minTeamSize: 2,
-        maxTeamSize: 3,
+        maxTeamSize: 2,
         qrCode: "/images/qr/tech-charades.jpeg",
         rules: [
             <span key="1"><strong>Team Formation:</strong> Exactly 2 members per team. Both members must participate together throughout the event.</span>,
@@ -135,6 +135,7 @@ export const eventsData: Record<string, EventData> = {
             <span key="7"><strong>Topic Domains:</strong> Programming Languages, Computer Hardware, Software, Operating Systems, Cybersecurity, AI/ML, Networking, DBMS, IT Abbreviations, and Tech Brands.</span>,
             <span key="8"><strong>Fair Play:</strong> Mobile phones, internet access, or external assistance during the game is strictly prohibited.</span>,
             <span key="9"><strong>Tie-Breaker:</strong> In case of a tie, tied teams participate in a tie-breaker round with a new set of technical terms.</span>,
+            <span key="fee"><strong>Registration Fee:</strong> ₹100 per team</span>,
             <span key="prize"><strong>Prize Pool:</strong> ₹3,500 total — First: ₹2,000 | Second: ₹1,000 | Third: ₹500</span>
         ]
     },
