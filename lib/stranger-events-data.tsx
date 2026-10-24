@@ -233,7 +233,7 @@ export const eventsData: Record<string, EventData> = {
     "reel-making": {
         id: "reel-making",
         title: "Reel Making",
-        subtitle: "Capture the Vibe, Direct the Cut",
+        subtitle: "MCA Tech Fest",
         description: "Turn fleeting moments into cinematic gold. Capture the energy, excitement, and atmosphere of PRAYAAN Tech Fest in a punchy, engaging reel. Storytelling, rhythm, and visual artistry meet the lens.",
         image: "/images/events/reelmaking.jpg",
         icon: <Clapperboard className="w-8 h-8 text-[#E7B878]" />,
@@ -241,9 +241,9 @@ export const eventsData: Record<string, EventData> = {
         time: "9:30 AM to 3:00 PM",
         venue: "Campus Wide (Submit Online / Control Desk)",
         registrationFee: "100",
-        feeLabel: "per entry (1-2 members)",
+        feeLabel: "per team (2 members)",
         prizePool: "2500",
-        minTeamSize: 1,
+        minTeamSize: 2,
         maxTeamSize: 2,
         qrCode: "/images/qr/reel-making.jpeg",
         rules: [
@@ -255,6 +255,7 @@ export const eventsData: Record<string, EventData> = {
             <span key="6"><strong>Ethics & Permissions:</strong> Obtain consent before filming individuals who do not wish to be recorded; restricted areas are off-limits.</span>,
             <span key="7"><strong>Submission:</strong> Completed, playable MP4 file must be submitted before the announced deadline via the designated submission channel.</span>,
             <span key="8"><strong>Judging Criteria (100 Pts):</strong> Creativity & Originality (25 pts), Cinematography & Visual Quality (20 pts), Editing & Transitions (20 pts), Storytelling & Event Coverage (20 pts), Music Synchronization & Overall Impact (15 pts).</span>,
+            <span key="fee"><strong>Registration Fee:</strong> ₹100 per team (2 members)</span>,
             <span key="prize"><strong>Prize Pool:</strong> ₹2,500 total — First: ₹1,500 | Second: ₹1,000</span>
         ]
     }
