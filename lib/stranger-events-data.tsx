@@ -101,7 +101,7 @@ export const eventsData: Record<string, EventData> = {
         rules: [
             <span key="1"><strong>Participation:</strong> Individual event. Each participant competes independently and must create their own outputs.</span>,
             <span key="2"><strong>Round 1 — AI Image Generation (10 mins):</strong> Generate an image using Gemini Nano Banana following the provided task brief. Judged on creativity and brief alignment.</span>,
-            <span key="3"><strong>Round 2 — Website Creation (15 mins):</strong> Create a college or university homepage using 8B.com with an attractive layout, relevant content, and clear structure.</span>,
+            <span key="3"><strong>Round 2 — Website Creation (20 mins):</strong> Create a college or university homepage using 8B.com with an attractive layout, relevant content, and clear structure.</span>,
             <span key="4"><strong>Permitted Tools:</strong> Use only tools and free features permitted by organizers. Paid/pro features are prohibited.</span>,
             <span key="5"><strong>Time Limits & Submission:</strong> Each round must be strictly completed within the allotted time; work must be ready to present/submit when time is called.</span>,
             <span key="6"><strong>Integrity:</strong> Copying another participant&apos;s prompts/work or using unauthorized external assistance will result in disqualification.</span>,
