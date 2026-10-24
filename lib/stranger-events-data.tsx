@@ -91,11 +91,11 @@ export const eventsData: Record<string, EventData> = {
         date: "October 30, 2026",
         time: "10:30 AM to 1:00 PM",
         venue: "MCA Lab–1",
-        registrationFee: "100",
+        registrationFee: "50",
         feeLabel: "per participant",
         prizePool: "3500",
         minTeamSize: 1,
-        maxTeamSize: 2,
+        maxTeamSize: 1,
         qrCode: "/images/qr/ai-prompt-engineering.jpeg",
         rules: [
             <span key="1"><strong>Participation:</strong> Individual event. Each participant competes independently and must create their own outputs.</span>,
@@ -105,6 +105,7 @@ export const eventsData: Record<string, EventData> = {
             <span key="5"><strong>Time Limits & Submission:</strong> Each round must be strictly completed within the allotted time; work must be ready to present/submit when time is called.</span>,
             <span key="6"><strong>Integrity:</strong> Copying another participant&apos;s prompts/work or using unauthorized external assistance will result in disqualification.</span>,
             <span key="7"><strong>Judging Criteria:</strong> Evaluated on Creativity (originality), Prompt Effectiveness (clarity of communication to AI), Quality (finish and clarity), Relevance (brief fidelity), and Time Management.</span>,
+            <span key="fee"><strong>Registration Fee:</strong> ₹50 per participant</span>,
             <span key="prize"><strong>Prize Pool:</strong> ₹3,500 total — First: ₹2,000 | Second: ₹1,000 | Third: ₹500</span>
         ]
     },
