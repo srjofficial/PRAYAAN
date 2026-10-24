@@ -1,11 +1,17 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Space_Grotesk, JetBrains_Mono, Cinzel, Creepster, Orbitron } from 'next/font/google'
+import { Space_Grotesk, JetBrains_Mono, Cinzel, Creepster, Orbitron, Michroma } from 'next/font/google'
 import localFont from 'next/font/local'
 import SmoothScroll from "@/components/smooth-scroll"
 import CustomCursor from "@/components/CustomCursor"
 
 import './globals.css'
+
+const michroma = Michroma({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-michroma',
+})
 
 const orbitron = Orbitron({
   subsets: ['latin'],
@@ -62,13 +68,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${asoka.variable} ${cinzel.variable} ${creepster.variable}`} data-scroll-behavior="smooth">
+    <html lang="en" className={`${michroma.variable} ${orbitron.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${asoka.variable} ${cinzel.variable} ${creepster.variable}`} data-scroll-behavior="smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet" />
+      </head>
       <body className="font-sans antialiased bg-[#0B0B0D] text-[#F0E5D5] overflow-x-hidden selection:bg-[#B97843]/30 selection:text-[#F0E5D5]">
         <CustomCursor />
         <SmoothScroll>
           {children}
         </SmoothScroll>
       </body>
-    </html >
+    </html>
   )
 }

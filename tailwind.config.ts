@@ -87,6 +87,7 @@ const config: Config = {
         space: ['var(--font-space-grotesk)', 'sans-serif'],
         title: ['var(--font-orbitron)', 'sans-serif'],
         orbitron: ['var(--font-orbitron)', 'sans-serif'],
+        michroma: ['var(--font-michroma)', 'Michroma', 'sans-serif'],
         cinzel: ['var(--font-cinzel)', 'serif'],
         asoka: ['var(--font-asoka)', 'sans-serif'],
       },
