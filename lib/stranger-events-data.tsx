@@ -34,7 +34,7 @@ export const eventsData: Record<string, EventData> = {
         date: "October 30, 2026",
         time: "9:30 AM to 12:00 PM",
         venue: "MCA Lab–2",
-        registrationFee: "100",
+        registrationFee: "40",
         feeLabel: "per participant",
         prizePool: "1500",
         minTeamSize: 1,
@@ -48,6 +48,7 @@ export const eventsData: Record<string, EventData> = {
             <span key="r2"><strong>Independent Effort:</strong> Participants must type the passage independently without any external assistance or notes.</span>,
             <span key="r3"><strong>Evaluation Criteria:</strong> Evaluated on Typing Speed (amount typed in allotted time), Accuracy (correctness of text), and Rule Compliance.</span>,
             <span key="r4"><strong>Disqualification:</strong> Any attempt to cheat, adjust the cover, or violate competition directives will result in immediate disqualification.</span>,
+            <span key="fee"><strong>Registration Fee:</strong> ₹40 per participant</span>,
             <span key="prize"><strong>Prize Pool:</strong> ₹1,500 total — First: ₹1,000 | Second: ₹500</span>
         ]
     },
