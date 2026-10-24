@@ -203,7 +203,7 @@ export const eventsData: Record<string, EventData> = {
     "spot-choreo": {
         id: "spot-choreo",
         title: "Spot Choreo",
-        subtitle: "Dance on the Spot, Win the Stage",
+        subtitle: "MCA Tech Fest",
         description: "No prep, no rehearsals — just raw talent and rhythm. Get a random song on the spot and choreograph an impromptu performance that wows the judges and crowd.",
         image: "/images/events/football.png",
         icon: <Music className="w-8 h-8 text-[#E7B878]" />,
@@ -211,7 +211,7 @@ export const eventsData: Record<string, EventData> = {
         time: "11:30 AM to 1:00 PM",
         venue: "To be announced",
         registrationFee: "100",
-        feeLabel: "per participant",
+        feeLabel: "per head",
         prizePool: "1750",
         minTeamSize: 1,
         maxTeamSize: 1,
@@ -226,6 +226,7 @@ export const eventsData: Record<string, EventData> = {
             <span key="8"><strong>Content Standards:</strong> Vulgar, offensive, or inappropriate moves, lyrics, or gestures are strictly barred.</span>,
             <span key="9"><strong>Judging Criteria (100 Pts):</strong> Choreography & Creativity (30 pts), Technique & Execution (25 pts), Expressions & Stage Presence (20 pts), Rhythm & Musicality (15 pts), Props & Impact (10 pts).</span>,
             <span key="10"><strong>Tie-Breaker:</strong> Tied participants compete in a tie-breaker round with a new song and shorter preparation time.</span>,
+            <span key="fee"><strong>Registration Fee:</strong> ₹100 per head</span>,
             <span key="prize"><strong>Prize Pool:</strong> ₹1,750 total — First: ₹1,000 | Second: ₹500 | Third: ₹250</span>
         ]
     },
