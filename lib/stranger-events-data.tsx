@@ -245,7 +245,7 @@ export const eventsData: Record<string, EventData> = {
         reportingTime: "10:00 AM",
         registrationFee: "100",
         feeLabel: "per team (2 members)",
-        prizePool: "2500",
+        prizePool: "1000",
         minTeamSize: 2,
         maxTeamSize: 2,
         qrCode: "/images/qr/reel-making.jpeg",
@@ -259,7 +259,7 @@ export const eventsData: Record<string, EventData> = {
             <span key="7"><strong>Submission:</strong> Completed, playable MP4 file must be submitted before the announced deadline via the designated submission channel.</span>,
             <span key="8"><strong>Judging Criteria (100 Pts):</strong> Creativity & Originality (25 pts), Cinematography & Visual Quality (20 pts), Editing & Transitions (20 pts), Storytelling & Event Coverage (20 pts), Music Synchronization & Overall Impact (15 pts).</span>,
             <span key="fee"><strong>Registration Fee:</strong> ₹100 per team (2 members)</span>,
-            <span key="prize"><strong>Prize Pool:</strong> ₹2,500 total — First: ₹1,500 | Second: ₹1,000</span>
+            <span key="prize"><strong>Prize Pool:</strong> ₹1,000</span>
         ]
     }
 };
