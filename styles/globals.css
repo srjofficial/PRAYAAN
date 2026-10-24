@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎨 Custom Font - Aisling */
+@font-face {
+  font-family: 'Aisling';
+  src: url('/fonts/AislingFreeDemo.otf?update=2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 240 8% 5%;       /* Void Black #0B0B0D */
+    --foreground: 36 47% 89%;      /* Stardust Ivory #F0E5D5 */
+    --card: 30 4% 10%;             /* Obsidian Charcoal #1B1A19 */
+    --card-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --popover: 30 4% 10%;          /* Obsidian Charcoal #1B1A19 */
+    --popover-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --primary: 35 72% 69%;         /* Stellar Gold #E7B878 */
+    --primary-foreground: 240 8% 5%; /* Void Black #0B0B0D */
+    --secondary: 27 47% 49%;       /* Solar Copper #B97843 */
+    --secondary-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --muted: 21 24% 16%;           /* Nebula Umber #342720 */
+    --muted-foreground: 36 20% 70%; /* Warm Muted Stardust */
+    --accent: 35 72% 69%;          /* Stellar Gold #E7B878 */
+    --accent-foreground: 240 8% 5%; /* Void Black #0B0B0D */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 36 47% 89%;
+    --border: 27 25% 20%;          /* Obsidian/Copper border */
+    --input: 30 4% 12%;            /* Obsidian Charcoal */
+    --ring: 35 72% 69%;            /* Stellar Gold #E7B878 */
+    --radius: 0.5rem;
+
+    /* Hex Design Tokens */
+    --void-black: #0B0B0D;
+    --obsidian-charcoal: #1B1A19;
+    --nebula-umber: #342720;
+    --solar-copper: #B97843;
+    --stellar-gold: #E7B878;
+    --stardust-ivory: #F0E5D5;
+    --cosmic-navy: #101B2B;
+    --nebula-blue: #283C55;
+    --nebula-violet: #68465D;
+  }
+
+  .dark {
+    --background: 240 8% 5%;       /* Void Black #0B0B0D */
+    --foreground: 36 47% 89%;      /* Stardust Ivory #F0E5D5 */
+    --card: 30 4% 10%;             /* Obsidian Charcoal #1B1A19 */
+    --card-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --popover: 30 4% 10%;          /* Obsidian Charcoal #1B1A19 */
+    --popover-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --primary: 35 72% 69%;         /* Stellar Gold #E7B878 */
+    --primary-foreground: 240 8% 5%; /* Void Black #0B0B0D */
+    --secondary: 27 47% 49%;       /* Solar Copper #B97843 */
+    --secondary-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --muted: 21 24% 16%;           /* Nebula Umber #342720 */
+    --muted-foreground: 36 20% 70%; /* Warm Muted Stardust */
+    --accent: 35 72% 69%;          /* Stellar Gold #E7B878 */
+    --accent-foreground: 240 8% 5%; /* Void Black #0B0B0D */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 36 47% 89%;
+    --border: 27 25% 20%;          /* Obsidian/Copper border */
+    --input: 30 4% 12%;            /* Obsidian Charcoal */
+    --ring: 35 72% 69%;            /* Stellar Gold #E7B878 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* 🌊 Slow Cinematic Gradient Movement */
+@keyframes gradientShift {
+  0% {
+    transform: scale(1) translateY(0px);
+  }
+
+  50% {
+    transform: scale(1.05) translateY(-10px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0px);
+  }
+}
+
+.animate-gradientShift {
+  animation: gradientShift 30s ease-in-out infinite;
+}
+
+/* ✨ Sparkle Float Animation */
+@keyframes sparkleFloat {
+  0% {
+    transform: translateY(0px) translateX(0px);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-120vh) translateX(var(--drift));
+    opacity: 0;
+  }
+}
+
+.animate-sparkleFloat {
+  animation: sparkleFloat linear infinite;
+}
+
+
+/* 🔄 Ring Rotation */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spinSlow {
+  animation: spinSlow 30s linear infinite;
+  will-change: transform;
+}
+
+/* 🌟 Hollow Glow Pulse */
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.animate-glowPulse {
+  animation: glowPulse 5s ease-in-out infinite;
+  will-change: transform, opacity;
+}

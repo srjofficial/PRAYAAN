@@ -1,0 +1,254 @@
+import { ReactNode } from "react";
+import { Keyboard, Globe, Sparkles, MessageSquare, Map, Dices, Music, Clapperboard } from "lucide-react";
+
+export type EventData = {
+    id: string;
+    title: string;
+    subtitle: string;
+    description: string;
+    image: string;
+    icon: ReactNode;
+    date?: string;
+    time?: string;
+    venue?: string;
+    registrationFee?: string;
+    ieeeFee?: string;
+    nonIeeeFee?: string;
+    feeLabel?: string;
+    prizePool?: string;
+    rules?: ReactNode[];
+    minTeamSize?: number;
+    maxTeamSize?: number;
+    isOnSpot?: boolean;
+    qrCode?: string;
+};
+
+export const eventsData: Record<string, EventData> = {
+    "blind-typing": {
+        id: "blind-typing",
+        title: "Blind Typing Competition",
+        subtitle: "Type without seeing. Focus. Accuracy. Speed.",
+        description: "Put your typing skills to the test! The Blind Typing Competition is an individual competition where participants type a given passage without seeing the keyboard. The competition rewards typing accuracy, speed, focus, and independent performance.",
+        image: "/images/events/sourcecode.png",
+        icon: <Keyboard className="w-8 h-8 text-[#E7B878]" />,
+        date: "October 30, 2026",
+        time: "9:30 AM to 12:00 PM",
+        venue: "MCA Lab–2",
+        registrationFee: "100",
+        feeLabel: "per participant",
+        prizePool: "1500",
+        minTeamSize: 1,
+        maxTeamSize: 1,
+        qrCode: "/images/qr/blind-typing.jpeg",
+        rules: [
+            <span key="format"><strong>Format:</strong> Individual competition &nbsp;|&nbsp; <strong>Total Time:</strong> 8 Minutes &nbsp;|&nbsp; <strong>Rounds:</strong> 2</span>,
+            <span key="round1"><strong>Round 1 — Preliminary (5 minutes):</strong> Participants type the given passage with the keyboard covered. Performance is assessed based on typing accuracy and speed.</span>,
+            <span key="round2"><strong>Round 2 — Final (3 minutes):</strong> Qualifying participants compete in the final round, typing a new passage independently with the keyboard covered.</span>,
+            <span key="r1"><strong>Keyboard Cover:</strong> The keyboard will be covered with a shield so participants cannot see keys while typing. Lifting, shifting, or adjusting the cover is strictly prohibited.</span>,
+            <span key="r2"><strong>Independent Effort:</strong> Participants must type the passage independently without any external assistance or notes.</span>,
+            <span key="r3"><strong>Evaluation Criteria:</strong> Evaluated on Typing Speed (amount typed in allotted time), Accuracy (correctness of text), and Rule Compliance.</span>,
+            <span key="r4"><strong>Disqualification:</strong> Any attempt to cheat, adjust the cover, or violate competition directives will result in immediate disqualification.</span>,
+            <span key="prize"><strong>Prize Pool:</strong> ₹1,500 total — First: ₹1,000 | Second: ₹500</span>
+        ]
+    },
+    "website-60": {
+        id: "website-60",
+        title: "Website in 60 Minutes",
+        subtitle: "Build Fast, Build Fierce",
+        description: "Design and deploy a complete, functional website in just 60 minutes. From layout to logic, every second counts. Show the world what you can build under pressure.",
+        image: "/images/events/vision.png",
+        icon: <Globe className="w-8 h-8 text-[#E7B878]" />,
+        date: "October 30, 2026",
+        time: "9:30 AM to 12:00 PM",
+        venue: "MCA Lab–3",
+        registrationFee: "100",
+        feeLabel: "₹100 per team (2 members)",
+        prizePool: "3750",
+        minTeamSize: 2,
+        maxTeamSize: 2,
+        qrCode: "/images/qr/website-60.jpeg",
+        rules: [
+            <span key="1"><strong>Team Formation:</strong> Exactly 2 members per team. Both members must participate together throughout the event.</span>,
+            <span key="2"><strong>Duration & Topic:</strong> Competition lasts exactly 60 minutes. The website topic will be announced at the start.</span>,
+            <span key="3"><strong>Internet Access:</strong> Internet access is available ONLY for the first 15 minutes of the competition.</span>,
+            <span key="4"><strong>Permitted Technologies:</strong> HTML, CSS, JavaScript, and either Bootstrap or Tailwind CSS.</span>,
+            <span key="5"><strong>Permitted AI Tools:</strong> ChatGPT, Google Gemini, and Claude (subject to organizer guidelines).</span>,
+            <span key="6"><strong>Originality:</strong> Each team must create their own website from scratch. Copying or unauthorized assistance is strictly prohibited.</span>,
+            <span key="7"><strong>Design Standards:</strong> Website must feature a clean layout, readable content, and a user-friendly, responsive design.</span>,
+            <span key="8"><strong>Submission & Demo:</strong> Work must be submitted within the 60-minute limit (no late submissions). Each team must demonstrate their website to the judges.</span>,
+            <span key="9"><strong>Regulations:</strong> Technical issues must be reported immediately to coordinators. The judges&apos; decision will be final and binding.</span>,
+            <span key="prize"><strong>Prize Pool:</strong> ₹3,750 total — First: ₹2,000 | Second: ₹1,000 | Third: ₹750</span>
+        ]
+    },
+    "ai-prompt-engineering": {
+        id: "ai-prompt-engineering",
+        title: "AI Prompt Engineering",
+        subtitle: "Command the Machine",
+        description: "Master the art of talking to AI. Craft precise, creative, and effective prompts to guide AI models toward achieving specific goals. The sharpest minds craft the sharpest prompts.",
+        image: "/images/events/coderift.png",
+        icon: <Sparkles className="w-8 h-8 text-[#E7B878]" />,
+        date: "October 30, 2026",
+        time: "10:30 AM to 1:00 PM",
+        venue: "MCA Lab–1",
+        registrationFee: "100",
+        feeLabel: "per participant",
+        prizePool: "3500",
+        minTeamSize: 1,
+        maxTeamSize: 2,
+        qrCode: "/images/qr/ai-prompt-engineering.jpeg",
+        rules: [
+            <span key="1"><strong>Participation:</strong> Individual event. Each participant competes independently and must create their own outputs.</span>,
+            <span key="2"><strong>Round 1 — AI Image Generation (10 mins):</strong> Generate an image using Gemini Nano Banana following the provided task brief. Judged on creativity and brief alignment.</span>,
+            <span key="3"><strong>Round 2 — Website Creation (15 mins):</strong> Create a college or university homepage using 8B.com with an attractive layout, relevant content, and clear structure.</span>,
+            <span key="4"><strong>Permitted Tools:</strong> Use only tools and free features permitted by organizers. Paid/pro features are prohibited.</span>,
+            <span key="5"><strong>Time Limits & Submission:</strong> Each round must be strictly completed within the allotted time; work must be ready to present/submit when time is called.</span>,
+            <span key="6"><strong>Integrity:</strong> Copying another participant&apos;s prompts/work or using unauthorized external assistance will result in disqualification.</span>,
+            <span key="7"><strong>Judging Criteria:</strong> Evaluated on Creativity (originality), Prompt Effectiveness (clarity of communication to AI), Quality (finish and clarity), Relevance (brief fidelity), and Time Management.</span>,
+            <span key="prize"><strong>Prize Pool:</strong> ₹3,500 total — First: ₹2,000 | Second: ₹1,000 | Third: ₹500</span>
+        ]
+    },
+    "tech-charades": {
+        id: "tech-charades",
+        title: "Tech Charades",
+        subtitle: "Act It Out, Tech It Up",
+        description: "Guess the tech term, algorithm, or gadget from your teammate's acting alone — no speaking allowed! A hilarious, fast-paced fusion of technology and charades.",
+        image: "/images/events/quirkquest.jpeg",
+        icon: <MessageSquare className="w-8 h-8 text-[#E7B878]" />,
+        date: "October 30, 2026",
+        time: "10:30 AM to 1:00 PM",
+        venue: "MCA S1A",
+        registrationFee: "100",
+        feeLabel: "per team",
+        prizePool: "3500",
+        minTeamSize: 2,
+        maxTeamSize: 3,
+        qrCode: "/images/qr/tech-charades.jpeg",
+        rules: [
+            <span key="1"><strong>Team Formation:</strong> Exactly 2 members per team. Both members must participate together throughout the event.</span>,
+            <span key="2"><strong>Gameplay & Time:</strong> One participant acts out the technical term while the teammate guesses. Fixed time limit of 60 seconds per round.</span>,
+            <span key="3"><strong>Non-Verbal Directive:</strong> Speaking, mouthing words, lip-syncing, or writing letters/words in the air or objects is strictly prohibited. Gestures, facial expressions, and body movements only.</span>,
+            <span key="4"><strong>Prohibited Signals:</strong> Gestures directly indicating specific letters, numbers, or spelling are prohibited.</span>,
+            <span key="5"><strong>Scoring:</strong> 10 points awarded for each correct guess; 0 points for incorrect answers.</span>,
+            <span key="6"><strong>Skip Option:</strong> Teams may skip a difficult term, but skipped terms cannot be re-attempted unless permitted by the coordinator.</span>,
+            <span key="7"><strong>Topic Domains:</strong> Programming Languages, Computer Hardware, Software, Operating Systems, Cybersecurity, AI/ML, Networking, DBMS, IT Abbreviations, and Tech Brands.</span>,
+            <span key="8"><strong>Fair Play:</strong> Mobile phones, internet access, or external assistance during the game is strictly prohibited.</span>,
+            <span key="9"><strong>Tie-Breaker:</strong> In case of a tie, tied teams participate in a tie-breaker round with a new set of technical terms.</span>,
+            <span key="prize"><strong>Prize Pool:</strong> ₹3,500 total — First: ₹2,000 | Second: ₹1,000 | Third: ₹500</span>
+        ]
+    },
+    "treasure-hunt": {
+        id: "treasure-hunt",
+        title: "Treasure Hunt (Tech Mystery Hunt)",
+        subtitle: "Follow the Clues, Claim the Chest",
+        description: "Navigate the campus following a trail of cryptic clues, technical riddles, ciphers, and physical checkpoints. The sharpest team to crack every puzzle and reach the final destination wins.",
+        image: "/images/events/strangerthings.jpeg",
+        icon: <Map className="w-8 h-8 text-[#E7B878]" />,
+        date: "October 30, 2026",
+        time: "9:30 AM to 1:00 PM",
+        venue: "PG Block Reception (Start Point)",
+        registrationFee: "150",
+        feeLabel: "per team",
+        prizePool: "6000",
+        minTeamSize: 2,
+        maxTeamSize: 3,
+        qrCode: "/images/qr/treasure-hunt.jpeg",
+        rules: [
+            <span key="1"><strong>Team Formation:</strong> Each team consists of 2–3 members with a unique Team ID. Team members must stay together throughout the hunt.</span>,
+            <span key="2"><strong>Team Phone Protocol:</strong> Exactly ONE designated mobile phone is permitted per team (for QR scanning, official event portal, audio/video clues, answer submission, and hint requests).</span>,
+            <span key="3"><strong>Phone Deposit:</strong> All other personal mobile phones must be deposited with organizers before the game starts.</span>,
+            <span key="4"><strong>AI & Search Prohibition:</strong> Using Google Search, ChatGPT, Gemini, other AI tools, social media, messaging apps, or external help via the Team Phone is strictly prohibited.</span>,
+            <span key="5"><strong>Mission Start:</strong> The game and timer begin strictly when organizers announce &ldquo;MISSION START&rdquo;. Collect the Mission File / Starter Kit beforehand.</span>,
+            <span key="6"><strong>QR Code Integrity:</strong> QR codes must not be moved, covered, damaged, hidden, copied, or tampered with. Scan only official event codes.</span>,
+            <span key="7"><strong>Checkpoint Protocol:</strong> Visit only permitted campus locations; restricted areas are strictly off-limits. Follow volunteer instructions.</span>,
+            <span key="8"><strong>Challenge Types:</strong> Ciphers, logic puzzles, audio/image clues, coding/debugging tasks, physical evidence collection, and final code-breaking.</span>,
+            <span key="9"><strong>Hint System:</strong> Each team receives 3 Hint Tokens. Each requested hint carries a 5-point penalty. Tokens cannot be transferred.</span>,
+            <span key="10"><strong>Safety & Conduct:</strong> No running in crowded areas; climbing walls, roofs, gates, or trees is forbidden; do not disrupt classes, staff, or other college activities.</span>,
+            <span key="prize"><strong>Prize Pool:</strong> ₹6,000 total — First: ₹3,000 | Second: ₹2,000 | Third: ₹1,000</span>
+        ]
+    },
+    "fun-games": {
+        id: "fun-games",
+        title: "Fun Games",
+        subtitle: "Endless Games, Endless Madness",
+        description: "A vibrant collection of fun games, quirky challenges, and light-hearted competitions. Jump in, play hard, and enjoy the chaos — this one's for everyone!",
+        image: "/images/events/fun.png",
+        icon: <Dices className="w-8 h-8 text-[#E7B878]" />,
+        date: "October 30, 2026",
+        time: "10:00 AM to 1:00 PM",
+        venue: "Smart Class",
+        registrationFee: "50",
+        feeLabel: "per participant (Pay on Spot)",
+        prizePool: "3000",
+        minTeamSize: 1,
+        maxTeamSize: 1,
+        isOnSpot: true,
+        rules: [
+            <span key="1"><strong>Participation:</strong> On-Spot Walk-In Entry — Open to all individuals and teams (no advance online registration needed).</span>,
+            <span key="2"><strong>Format:</strong> 5 exciting mini-game stations testing accuracy, balance, coordination, air currents, and speed.</span>,
+            <span key="3"><strong>Game Selection:</strong> Play any individual game for ₹20 or grab the All 5 Games Pass for ₹100.</span>,
+            <span key="4"><strong>Game 1 — വട്ടം മൂടാം, വട്ടത്തിലാകാം!:</strong> Cover the red circle completely using only 3 black paper pieces without leaving any red visible.</span>,
+            <span key="5"><strong>Game 2 — കാറ്റല്ല, പേപ്പറാ!:</strong> Extinguish the candle flame using only the airflow created by waving paper (mouth blowing prohibited).</span>,
+            <span key="6"><strong>Game 3 — ബലൂൺ പോയാൽ കപ്പ് പോയി!:</strong> Balance a balloon on one hand while arranging plastic cups in order with the other hand.</span>,
+            <span key="7"><strong>Game 4 — പൊട്ടുമോ ഇല്ലയോ?:</strong> Hold a balloon securely under your arm and complete the challenge without using your hands.</span>,
+            <span key="8"><strong>Game 5 — പേനയ്ക്ക് കുപ്പിയോട് പ്രണയം:</strong> Hold a pencil under your upper lip using lip grip, bend over an empty bottle, and drop the pencil inside hands-free.</span>,
+            <span key="prize"><strong>Prize Pool:</strong> ₹3,000 total — Highest aggregate performers across game stations claim prizes!</span>
+        ]
+    },
+    "spot-choreo": {
+        id: "spot-choreo",
+        title: "Spot Choreo",
+        subtitle: "Dance on the Spot, Win the Stage",
+        description: "No prep, no rehearsals — just raw talent and rhythm. Get a random song on the spot and choreograph an impromptu performance that wows the judges and crowd.",
+        image: "/images/events/football.png",
+        icon: <Music className="w-8 h-8 text-[#E7B878]" />,
+        date: "October 30, 2026",
+        time: "11:30 AM to 1:00 PM",
+        venue: "To be announced",
+        registrationFee: "100",
+        feeLabel: "per participant",
+        prizePool: "1750",
+        minTeamSize: 1,
+        maxTeamSize: 1,
+        rules: [
+            <span key="1"><strong>Format:</strong> Solo (individual) event; group performances are not allowed.</span>,
+            <span key="2"><strong>Song Allotment:</strong> Songs are randomly selected and allotted by the organizers on the spot; songs cannot be changed or exchanged.</span>,
+            <span key="3"><strong>Preparation Time:</strong> Each participant receives exactly 15 minutes of preparation time after the song is announced.</span>,
+            <span key="4"><strong>Duration:</strong> Performance duration must be a minimum of 2 minutes and a maximum of 3 minutes. Exceeding 3 minutes may attract penalties.</span>,
+            <span key="5"><strong>Style & Spontaneity:</strong> Any dance style or combination is allowed. Choreography must be created entirely during the 15-minute prep time (pre-planned routines are prohibited).</span>,
+            <span key="6"><strong>Props:</strong> Basic props may be provided on the spot and can be incorporated creatively into the performance.</span>,
+            <span key="7"><strong>Assistance Ban:</strong> Use of mobile phones, internet, or external assistance during preparation is strictly prohibited.</span>,
+            <span key="8"><strong>Content Standards:</strong> Vulgar, offensive, or inappropriate moves, lyrics, or gestures are strictly barred.</span>,
+            <span key="9"><strong>Judging Criteria (100 Pts):</strong> Choreography & Creativity (30 pts), Technique & Execution (25 pts), Expressions & Stage Presence (20 pts), Rhythm & Musicality (15 pts), Props & Impact (10 pts).</span>,
+            <span key="10"><strong>Tie-Breaker:</strong> Tied participants compete in a tie-breaker round with a new song and shorter preparation time.</span>,
+            <span key="prize"><strong>Prize Pool:</strong> ₹1,750 total — First: ₹1,000 | Second: ₹500 | Third: ₹250</span>
+        ]
+    },
+    "reel-making": {
+        id: "reel-making",
+        title: "Reel Making",
+        subtitle: "Capture the Vibe, Direct the Cut",
+        description: "Turn fleeting moments into cinematic gold. Capture the energy, excitement, and atmosphere of PRAYAAN Tech Fest in a punchy, engaging reel. Storytelling, rhythm, and visual artistry meet the lens.",
+        image: "/images/events/reelmaking.jpg",
+        icon: <Clapperboard className="w-8 h-8 text-[#E7B878]" />,
+        date: "October 30, 2026",
+        time: "9:30 AM to 3:00 PM",
+        venue: "Campus Wide (Submit Online / Control Desk)",
+        registrationFee: "100",
+        feeLabel: "per entry (1-2 members)",
+        prizePool: "2500",
+        minTeamSize: 1,
+        maxTeamSize: 2,
+        qrCode: "/images/qr/reel-making.jpeg",
+        rules: [
+            <span key="1"><strong>Team Formation:</strong> Exactly 2 members per team. Both members must contribute to creating the reel.</span>,
+            <span key="2"><strong>Event Focus:</strong> Capture the highlights, energy, exciting moments, and vibrant atmosphere of PRAYAAN Tech Fest.</span>,
+            <span key="3"><strong>Original Footage:</strong> All footage must be recorded on campus during PRAYAAN using mobile phones or cameras. Pre-recorded or internet footage is strictly prohibited.</span>,
+            <span key="4"><strong>Video Specifications:</strong> Vertical format (9:16), duration between 30 and 90 seconds, MP4 format, recommended 720p+ resolution.</span>,
+            <span key="5"><strong>Creative Editing:</strong> Transitions, visual effects, text overlays, trending music, and creative editing are permitted. Any language allowed if respectful.</span>,
+            <span key="6"><strong>Ethics & Permissions:</strong> Obtain consent before filming individuals who do not wish to be recorded; restricted areas are off-limits.</span>,
+            <span key="7"><strong>Submission:</strong> Completed, playable MP4 file must be submitted before the announced deadline via the designated submission channel.</span>,
+            <span key="8"><strong>Judging Criteria (100 Pts):</strong> Creativity & Originality (25 pts), Cinematography & Visual Quality (20 pts), Editing & Transitions (20 pts), Storytelling & Event Coverage (20 pts), Music Synchronization & Overall Impact (15 pts).</span>,
+            <span key="prize"><strong>Prize Pool:</strong> ₹2,500 total — First: ₹1,500 | Second: ₹1,000</span>
+        ]
+    }
+};

@@ -1,0 +1,548 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 240 8% 5%;       /* Void Black #0B0B0D */
+    --foreground: 36 47% 89%;      /* Stardust Ivory #F0E5D5 */
+    --card: 30 4% 10%;             /* Obsidian Charcoal #1B1A19 */
+    --card-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --popover: 30 4% 10%;          /* Obsidian Charcoal #1B1A19 */
+    --popover-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --primary: 35 72% 69%;         /* Stellar Gold #E7B878 */
+    --primary-foreground: 240 8% 5%; /* Void Black #0B0B0D */
+    --secondary: 27 47% 49%;       /* Solar Copper #B97843 */
+    --secondary-foreground: 36 47% 89%; /* Stardust Ivory #F0E5D5 */
+    --muted: 21 24% 16%;           /* Nebula Umber #342720 */
+    --muted-foreground: 36 20% 70%; /* Warm Muted Stardust */
+    --accent: 35 72% 69%;          /* Stellar Gold #E7B878 */
+    --accent-foreground: 240 8% 5%; /* Void Black #0B0B0D */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 36 47% 89%;
+    --border: 27 25% 20%;          /* Obsidian/Copper border */
+    --input: 30 4% 12%;            /* Obsidian Charcoal */
+    --ring: 35 72% 69%;            /* Stellar Gold #E7B878 */
+    --radius: 0.5rem;
+
+    /* Hex Design Tokens */
+    --void-black: #0B0B0D;
+    --obsidian-charcoal: #1B1A19;
+    --nebula-umber: #342720;
+    --solar-copper: #B97843;
+    --stellar-gold: #E7B878;
+    --stardust-ivory: #F0E5D5;
+    --cosmic-navy: #101B2B;
+    --nebula-blue: #283C55;
+    --nebula-violet: #68465D;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-color: #0B0B0D;
+    color: #F0E5D5;
+  }
+
+  ::selection {
+    background-color: rgba(185, 120, 67, 0.35);
+    color: #F0E5D5;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0B0D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B1A19;
+  border: 1px solid #342720;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B97843;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-slow {
+  animation: marquee 40s linear infinite;
+}
+
+/* Scrolling text */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scroll-left {
+  animation: scroll-left 15s linear infinite;
+}
+
+/* Glow effects */
+.glow-gold {
+  text-shadow: 0 0 10px rgba(231, 184, 120, 0.6), 0 0 35px rgba(231, 184, 120, 0.25);
+}
+
+.glow-copper {
+  text-shadow: 0 0 10px rgba(185, 120, 67, 0.6), 0 0 35px rgba(185, 120, 67, 0.25);
+}
+
+.glow-amber {
+  text-shadow: 0 0 12px rgba(231, 184, 120, 0.7), 0 0 40px rgba(185, 120, 67, 0.35);
+}
+
+.glow-red {
+  text-shadow: 0 0 10px rgba(231, 184, 120, 0.5), 0 0 40px rgba(185, 120, 67, 0.3);
+}
+
+/* Grid background pattern */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(240, 229, 213, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240, 229, 213, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Noise overlay */
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Pulse border */
+@keyframes pulse-border {
+
+  0%,
+  100% {
+    border-color: rgba(185, 120, 67, 0.3);
+  }
+
+  50% {
+    border-color: rgba(231, 184, 120, 0.8);
+  }
+}
+
+.pulse-border {
+  animation: pulse-border 2s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Slow beam/heartbeat glow — warm gold amber pulse */
+@keyframes beam-pulse {
+
+  0%,
+  100% {
+    text-shadow: 0 0 0px rgba(231, 184, 120, 0), 0 0 0px rgba(185, 120, 67, 0);
+    color: rgba(240, 229, 213, 0.85);
+  }
+
+  15% {
+    text-shadow: 0 0 20px rgba(231, 184, 120, 0.7), 0 0 60px rgba(185, 120, 67, 0.35), 0 0 100px rgba(104, 70, 93, 0.15);
+    color: rgba(240, 229, 213, 1);
+  }
+
+  30% {
+    text-shadow: 0 0 6px rgba(231, 184, 120, 0.2), 0 0 15px rgba(185, 120, 67, 0.1);
+    color: rgba(240, 229, 213, 0.9);
+  }
+
+  40% {
+    text-shadow: 0 0 14px rgba(231, 184, 120, 0.5), 0 0 45px rgba(185, 120, 67, 0.25);
+    color: rgba(240, 229, 213, 0.98);
+  }
+
+  55% {
+    text-shadow: 0 0 0px rgba(231, 184, 120, 0), 0 0 0px rgba(185, 120, 67, 0);
+    color: rgba(240, 229, 213, 0.85);
+  }
+}
+
+.animate-beam {
+  animation: beam-pulse 6s ease-in-out infinite;
+}
+
+/* Floating sparkles for fire effect */
+@keyframes float-sparkle {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-100px) translateX(20px) scale(1.2);
+    opacity: 0.8;
+  }
+
+  90% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes float-sparkle-2 {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateY(-120px) translateX(-30px) rotate(180deg);
+    opacity: 0.6;
+  }
+
+  95% {
+    opacity: 0;
+  }
+}
+
+.animate-float-sparkle {
+  animation: float-sparkle 4s ease-in-out infinite;
+}
+
+.animate-float-sparkle-2 {
+  animation: float-sparkle-2 5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Spin Slow Animation */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spinSlow {
+  animation: spinSlow 25s linear infinite;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 15s linear infinite;
+}
+
+
+@keyframes subtleFlicker {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+  }
+
+  5% {
+    opacity: 0.95;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+  }
+
+  10% {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+  }
+
+  15% {
+    opacity: 0.97;
+    text-shadow: 0 0 14px rgba(255, 0, 0, 0.7);
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.96;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0.98;
+    text-shadow: 0 0 12px rgba(255, 0, 0, 0.6);
+  }
+
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0.4);
+  }
+}
+
+.flicker-text {
+  animation: subtleFlicker 3s infinite ease-in-out;
+}
+
+
+.aura-glow {
+  color: #ffd700;
+  text-shadow:
+    0 0 6px rgba(255, 215, 0, 0.6),
+    0 0 12px rgba(255, 200, 0, 0.7),
+    0 0 20px rgba(255, 180, 0, 0.8);
+}
+
+
+/* Loading Screen Animations */
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 6s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spinReverse 8s linear infinite;
+}
+
+/* ---------------------------------------------------- */
+/* ASTRAL CINEMATIC ATMOSPHERE & GLITCH EFFECTS         */
+/* ---------------------------------------------------- */
+
+/* 1. Lightning Flash Overlay */
+@keyframes lightning-flash {
+
+  0%,
+  95%,
+  98%,
+  100% {
+    opacity: 0;
+  }
+
+  96% {
+    opacity: 0.6;
+  }
+
+  97% {
+    opacity: 0.15;
+  }
+
+  99% {
+    opacity: 0.8;
+  }
+}
+
+.animate-lightning {
+  animation: lightning-flash 10s infinite;
+  pointer-events: none;
+}
+
+/* 2. Astral Text Glitch & Spectral Separation */
+@keyframes stranger-glitch {
+  0% {
+    transform: translate(0);
+    text-shadow: 0 0 10px rgba(231, 184, 120, 0.7);
+  }
+
+  20% {
+    transform: translate(-2px, 1px);
+    text-shadow: 2px 0 15px rgba(231, 184, 120, 0.9), -2px 0 6px rgba(40, 60, 85, 0.6);
+  }
+
+  21% {
+    transform: translate(0);
+    text-shadow: 0 0 10px rgba(231, 184, 120, 0.7);
+  }
+
+  45% {
+    transform: translate(0);
+    text-shadow: 0 0 10px rgba(231, 184, 120, 0.7);
+  }
+
+  46% {
+    transform: translate(2px, -1px);
+    text-shadow: -2px 0 20px rgba(185, 120, 67, 0.9), 2px 0 6px rgba(104, 70, 93, 0.6);
+  }
+
+  47% {
+    transform: translate(0);
+    text-shadow: 0 0 10px rgba(231, 184, 120, 0.7);
+  }
+
+  100% {
+    transform: translate(0);
+    text-shadow: 0 0 10px rgba(231, 184, 120, 0.7);
+  }
+}
+
+.animate-stranger-glitch {
+  animation: stranger-glitch 5s infinite normal;
+  display: inline-block;
+}
+
+/* 3. Text Flicker Outline (Stellar Gold / Solar Copper Neon effect) */
+@keyframes text-flicker-neon {
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    opacity: 1;
+    text-shadow:
+      0 0 5px #F0E5D5,
+      0 0 10px #F0E5D5,
+      0 0 20px #E7B878,
+      0 0 40px #E7B878,
+      0 0 80px #B97843,
+      0 0 90px #B97843;
+  }
+
+  20%,
+  24%,
+  55% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+.animate-neon-flicker {
+  animation: text-flicker-neon 4s infinite alternate;
+}
+
+/* 4. Upside Down Spores */
+@keyframes spore-drift {
+  0% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.8;
+  }
+
+  90% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-20vh) translateX(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.spore {
+  position: absolute;
+  background: #F0E5D5;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 2px rgba(231, 184, 120, 0.6);
+  pointer-events: none;
+  z-index: 15;
+}
+
+/* 5. Smart Cursor Hiding */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
