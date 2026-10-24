@@ -73,13 +73,12 @@ PRAYAAN/
 │   └── utils.ts                # Class merge utility (cn)
 │
 ├── public/
-│   ├── frames/
-│   │   ├── cliff-webp/         # Desktop landscape WebP frames (0001–0208)
-│   │   └── cliff-mobile-webp/  # Mobile portrait WebP frames (0001–0208)
 │   ├── images/
 │   │   ├── qr/                 # Official event payment QR codes
 │   │   └── events/             # High-res poster assets
-│   └── fonts/                  # Custom display typography
+│   ├── fonts/                  # Custom display typography
+│   ├── man-on-cliff.mp4        # Desktop hero video
+│   └── man-new-mobil.mp4       # Mobile hero video
 │
 ├── .env.example                # Template for environment variables
 ├── package.json                # Project dependencies & scripts
