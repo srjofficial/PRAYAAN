@@ -59,7 +59,7 @@ const events = [
     {
         id: "reel-making",
         title: "Reel Making",
-        description: "Turn fest moments into cinematic gold. Capture the energy, atmosphere, and buzz of PRAYAAN in a creative 30–60 second short-form reel.",
+        description: "Turn fest moments into cinematic gold. Capture the energy, atmosphere, and buzz of PRAYAAN in an original 1-minute (60 seconds) short-form reel.",
         image: "/images/events/reelmaking.png",
         icon: <Clapperboard className="w-6 h-6 text-[#E7B878]" />
     }

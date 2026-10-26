@@ -1,6 +1,11 @@
 import { ReactNode } from "react";
 import { Keyboard, Globe, Sparkles, MessageSquare, Map, Dices, Music, Clapperboard } from "lucide-react";
 
+export type RuleSection = {
+    title: string;
+    items: ReactNode[];
+};
+
 export type EventData = {
     id: string;
     title: string;
@@ -11,12 +16,14 @@ export type EventData = {
     date?: string;
     time?: string;
     venue?: string;
+    reportingTime?: string;
     registrationFee?: string;
     ieeeFee?: string;
     nonIeeeFee?: string;
     feeLabel?: string;
     prizePool?: string;
     rules?: ReactNode[];
+    ruleSections?: RuleSection[];
     minTeamSize?: number;
     maxTeamSize?: number;
     isOnSpot?: boolean;
@@ -64,22 +71,56 @@ export const eventsData: Record<string, EventData> = {
         reportingTime: "9:30 AM",
         registrationFee: "100",
         feeLabel: "per team (2 members)",
-        prizePool: "3750",
+        prizePool: "3500",
         minTeamSize: 2,
         maxTeamSize: 2,
         qrCode: "/images/qr/website-60.jpeg",
-        rules: [
-            <span key="1"><strong>Team Formation:</strong> Exactly 2 members per team. Both members must participate together throughout the event.</span>,
-            <span key="2"><strong>Duration & Topic:</strong> Competition lasts exactly 60 minutes. The website topic will be announced at the start.</span>,
-            <span key="3"><strong>Internet Access:</strong> Internet access is available ONLY for the first 15 minutes of the competition.</span>,
-            <span key="4"><strong>Permitted Technologies:</strong> HTML, CSS, JavaScript, and either Bootstrap or Tailwind CSS.</span>,
-            <span key="5"><strong>Permitted AI Tools:</strong> ChatGPT, Google Gemini, and Claude (subject to organizer guidelines).</span>,
-            <span key="6"><strong>Originality:</strong> Each team must create their own website from scratch. Copying or unauthorized assistance is strictly prohibited.</span>,
-            <span key="7"><strong>Design Standards:</strong> Website must feature a clean layout, readable content, and a user-friendly, responsive design.</span>,
-            <span key="8"><strong>Submission & Demo:</strong> Work must be submitted within the 60-minute limit (no late submissions). Each team must demonstrate their website to the judges.</span>,
-            <span key="9"><strong>Regulations:</strong> Technical issues must be reported immediately to coordinators. The judges&apos; decision will be final and binding.</span>,
-            <span key="fee"><strong>Registration Fee:</strong> ₹100 per team (2 members)</span>,
-            <span key="prize"><strong>Prize Pool:</strong> ₹3,750 total — First: ₹2,000 | Second: ₹1,000 | Third: ₹750</span>
+        ruleSections: [
+            {
+                title: "Team Formation",
+                items: [
+                    <span key="1">Each team must consist of exactly 2 members.</span>,
+                    <span key="2">All participants must register before the event begins.</span>,
+                    <span key="3">Team members must participate together throughout the event.</span>,
+                    <span key="4">A participant cannot be a member of more than one team.</span>
+                ]
+            },
+            {
+                title: "Rules of the Competition",
+                items: [
+                    <span key="1">The competition will last for exactly 60 minutes.</span>,
+                    <span key="2">All coding must be done using Visual Studio Code (VS Code).</span>,
+                    <span key="3">The website topic will be announced at the beginning of the competition.</span>,
+                    <span key="4">Internet access will be available only for the first 15 minutes of the competition.</span>,
+                    <span key="5">Participants may use HTML, CSS, JavaScript, and either Bootstrap or Tailwind CSS.</span>,
+                    <span key="6">Each participant/team must create their own website. Copying or unauthorized assistance is strictly prohibited.</span>,
+                    <span key="7">The website must have a proper layout, readable content, and a user-friendly design.</span>,
+                    <span key="8">The permitted AI tools are ChatGPT and Google Gemini.</span>,
+                    <span key="9">Internet access and AI tool usage must comply with the organizers&apos; guidelines.</span>,
+                    <span key="10">Participants must submit their work within the allotted time. Late submissions will not be accepted.</span>,
+                    <span key="11">Each participant/team must demonstrate their website to the judges.</span>,
+                    <span key="12">Any technical issues must be reported immediately to the event coordinators.</span>,
+                    <span key="13">Systems will be provided at the venue.</span>,
+                    <span key="14">The judges&apos; decision will be final and binding.</span>
+                ]
+            },
+            {
+                title: "General Guidelines",
+                items: [
+                    <span key="1">Participants must report to the venue at the specified time.</span>,
+                    <span key="2">All participants must follow the instructions provided by the event coordinators.</span>,
+                    <span key="3">Participants are expected to maintain discipline and sportsmanship throughout the event.</span>,
+                    <span key="4">The organizers reserve the right to modify the rules if necessary.</span>,
+                    <span key="5">Any changes to the rules will be communicated to participants before the event begins.</span>
+                ]
+            },
+            {
+                title: "Prize Pool & Registration",
+                items: [
+                    <span key="prize"><strong>Prize Pool:</strong> ₹3,500 total — First Prize: ₹2,000 | Second Prize: ₹1,000 | Third Prize: ₹500</span>,
+                    <span key="fee"><strong>Registration Fee:</strong> ₹100 per team (2 members)</span>
+                ]
+            }
         ]
     },
     "ai-prompt-engineering": {
@@ -249,17 +290,63 @@ export const eventsData: Record<string, EventData> = {
         minTeamSize: 2,
         maxTeamSize: 2,
         qrCode: "/images/qr/reel-making.jpeg",
-        rules: [
-            <span key="1"><strong>Team Formation:</strong> Exactly 2 members per team. Both members must contribute to creating the reel.</span>,
-            <span key="2"><strong>Event Focus:</strong> Capture the highlights, energy, exciting moments, and vibrant atmosphere of PRAYAAN Tech Fest.</span>,
-            <span key="3"><strong>Original Footage:</strong> All footage must be recorded on campus during PRAYAAN using mobile phones or cameras. Pre-recorded or internet footage is strictly prohibited.</span>,
-            <span key="4"><strong>Video Specifications:</strong> Vertical format (9:16), duration between 30 and 90 seconds, MP4 format, recommended 720p+ resolution.</span>,
-            <span key="5"><strong>Creative Editing:</strong> Transitions, visual effects, text overlays, trending music, and creative editing are permitted. Any language allowed if respectful.</span>,
-            <span key="6"><strong>Ethics & Permissions:</strong> Obtain consent before filming individuals who do not wish to be recorded; restricted areas are off-limits.</span>,
-            <span key="7"><strong>Submission:</strong> Completed, playable MP4 file must be submitted before the announced deadline via the designated submission channel.</span>,
-            <span key="8"><strong>Judging Criteria (100 Pts):</strong> Creativity & Originality (25 pts), Cinematography & Visual Quality (20 pts), Editing & Transitions (20 pts), Storytelling & Event Coverage (20 pts), Music Synchronization & Overall Impact (15 pts).</span>,
-            <span key="fee"><strong>Registration Fee:</strong> ₹100 per team (2 members)</span>,
-            <span key="prize"><strong>Prize Pool:</strong> ₹1,000</span>
+        ruleSections: [
+            {
+                title: "Team Formation",
+                items: [
+                    <span key="1">Each team must consist of exactly 2 members.</span>,
+                    <span key="2">All participants must register before the event begins.</span>,
+                    <span key="3">Both team members must contribute to creating the reel.</span>,
+                    <span key="4">A participant cannot be a member of more than one team.</span>,
+                    <span key="5">Team members cannot be changed after registration.</span>
+                ]
+            },
+            {
+                title: "Competition Rules",
+                items: [
+                    <span key="1">Each team must create an original reel based on the theme announced at the spot.</span>,
+                    <span key="2">Participants must record their own footage during the event; previously recorded videos or footage from other sources are not allowed.</span>,
+                    <span key="3">Mobile phones or cameras may be used to record videos.</span>,
+                    <span key="4">Editing applications may be used. Transitions, effects, text, music, and creative editing techniques (basic to advanced) are permitted.</span>,
+                    <span key="5">The reel must be original and created exclusively for the competition. AI-generated content or AI-created videos are not allowed.</span>,
+                    <span key="6">Plagiarism, copied content, and unauthorized use of another participant&apos;s footage are prohibited.</span>,
+                    <span key="7">All content must be appropriate and respectful to participants and organizers.</span>,
+                    <span key="8">Permission must be obtained before recording individuals who do not wish to be filmed.</span>,
+                    <span key="9">The decision of the event coordinators and judges will be final.</span>
+                ]
+            },
+            {
+                title: "Reel Specifications",
+                items: [
+                    <span key="1"><strong>Team Size:</strong> Exactly 2 members.</span>,
+                    <span key="2"><strong>Video Format:</strong> Vertical (9:16).</span>,
+                    <span key="3"><strong>Duration:</strong> Exactly 1 minute (60 seconds).</span>,
+                    <span key="4"><strong>Video Quality:</strong> Minimum 720p resolution recommended.</span>,
+                    <span key="5"><strong>File Format:</strong> MP4.</span>,
+                    <span key="6"><strong>Content:</strong> Follow the theme announced at the spot; capture PRAYAAN and SNGCE campus content as instructed.</span>,
+                    <span key="7"><strong>Submission Limit:</strong> Each team may upload only one video to the Google Drive link. Multiple video submissions are not allowed.</span>,
+                    <span key="8"><strong>Language:</strong> Any language is permitted, provided the content is appropriate.</span>,
+                    <span key="9"><strong>Editing:</strong> Basic to advanced editing techniques are permitted.</span>
+                ]
+            },
+            {
+                title: "Time Management & Submission",
+                items: [
+                    <span key="1"><strong>Submission Deadline:</strong> 30 October 2026, 11:00 PM.</span>,
+                    <span key="2">The completed, edited reel must be uploaded to the Google Drive link provided by the organizers.</span>,
+                    <span key="3">Participants must complete and submit their reels within the announced time limit. Late submissions may be rejected or penalized.</span>,
+                    <span key="4">Teams must ensure that their reels meet the specified duration and format requirements.</span>,
+                    <span key="5">No changes will be permitted after final submission unless authorized by the organizers.</span>,
+                    <span key="6">Participants are responsible for ensuring that their submitted video files are playable.</span>
+                ]
+            },
+            {
+                title: "Registration & Prize",
+                items: [
+                    <span key="fee"><strong>Registration Fee:</strong> ₹100 per team (2 members)</span>,
+                    <span key="prize"><strong>Prize Pool:</strong> ₹1,000</span>
+                ]
+            }
         ]
     }
 };
