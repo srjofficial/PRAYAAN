@@ -127,6 +127,30 @@ export default function EventDetailView({ event }: EventDetailViewProps) {
 
 
 
+                            {/* Rules & Guidelines */}
+                            {event.rules && event.rules.length > 0 && (
+                                <section>
+                                    <h3 className="text-xs font-mono text-[#E7B878] mb-6 uppercase tracking-[0.2em] flex items-center gap-2">
+                                        <span className="w-4 h-px bg-[#B97843]" />
+                                        Rules & Guidelines
+                                    </h3>
+                                    <div className="p-6 md:p-8 bg-[#1B1A19] border border-[#B97843]/35 rounded-sm shadow-[inset_0_0_20px_rgba(52,39,32,0.4)]">
+                                        <ul className="space-y-4 font-space text-[#F0E5D5]/85">
+                                            <li className="flex gap-4 items-start text-xl md:text-2xl font-bold text-[#E7B878]">
+                                                <span className="text-[#E7B878] mt-1 font-black shrink-0 text-xl md:text-2xl">❯</span>
+                                                <span className="leading-relaxed">Bring your ID proof for verification purpose.</span>
+                                            </li>
+                                            {event.rules.map((rule: string, idx: number) => (
+                                                <li key={idx} className="flex gap-4 items-start text-base md:text-lg">
+                                                    <span className="text-[#E7B878] mt-1 font-black shrink-0">❯</span>
+                                                    <span className="leading-relaxed">{rule}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </section>
+                            )}
+
                             {/* Coordinators */}
                             <section>
                                 <h3 className="text-xs font-mono text-[#E7B878] mb-6 uppercase tracking-[0.2em] flex items-center gap-2">

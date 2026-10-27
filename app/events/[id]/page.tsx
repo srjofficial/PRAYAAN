@@ -186,6 +186,12 @@ export default function EventPage({ params }: PageProps) {
                             </p>
                             {event.ruleSections ? (
                                 <div className="space-y-8">
+                                    <ul className="font-space">
+                                        <li className="flex gap-4 items-start text-xl md:text-2xl font-bold text-[#E7B878] pb-2 border-b border-[#B97843]/20">
+                                            <span className="text-[#E7B878] mt-1 font-black text-xl md:text-2xl shrink-0">❯</span>
+                                            <span className="leading-relaxed">Bring your ID proof for verification purpose.</span>
+                                        </li>
+                                    </ul>
                                     {event.ruleSections.map((section, sIdx) => (
                                         <div key={sIdx} className="space-y-3">
                                             <div className="flex items-center gap-2 border-b border-[#B97843]/20 pb-2">
@@ -207,6 +213,10 @@ export default function EventPage({ params }: PageProps) {
                                 </div>
                             ) : (
                                 <ul className="space-y-4 font-medium text-lg font-space text-[#F0E5D5]/85">
+                                    <li className="flex gap-4 items-start text-xl md:text-2xl font-bold text-[#E7B878]">
+                                        <span className="text-[#E7B878] mt-1 font-black text-xl md:text-2xl shrink-0">❯</span>
+                                        <span className="leading-relaxed">Bring your ID proof for verification purpose.</span>
+                                    </li>
                                     {event.rules ? (
                                         event.rules.map((rule, idx) => (
                                             <li key={idx} className="flex gap-4 items-start">
