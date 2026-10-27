@@ -97,8 +97,8 @@ export default function Footer() {
                 </div>
 
                 {/* Main Contacts */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10 border-t border-[#342720] pt-10 mt-6">
-                    <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10 border-t border-[#342720] pt-10 mt-6">
+                    <div className="flex flex-col items-center text-center">
                         <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Srihari M</h4>
                         <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">FACULTY COORDINATOR</p>
                         <a href="tel:8078426026" className="font-space text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
@@ -114,12 +114,20 @@ export default function Footer() {
                             8129212673
                         </a>
                     </div>
-                    <div className="flex flex-col items-center md:items-end text-center md:text-right">
+                    <div className="flex flex-col items-center text-center">
                         <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Aveen</h4>
                         <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">STUDENT COORDINATOR</p>
                         <a href="tel:8129244658" className="font-space text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[#E7B878] shadow-[0_0_8px_rgba(231,184,120,0.9)] animate-pulse" />
                             8129244658
+                        </a>
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                        <h4 className="font-title text-[#E7B878] tracking-widest text-lg font-semibold hover:text-[#F0E5D5] transition-colors">Gino</h4>
+                        <p className="font-space text-[10px] md:text-xs text-[#B97843] uppercase tracking-[0.2em] mb-2 font-semibold">STUDENT COORDINATOR</p>
+                        <a href="tel:8281459949" className="font-space text-[#F0E5D5]/80 hover:text-[#E7B878] transition-colors flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#E7B878] shadow-[0_0_8px_rgba(231,184,120,0.9)] animate-pulse" />
+                            8281459949
                         </a>
                     </div>
                 </div>

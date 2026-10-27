@@ -50,7 +50,7 @@ export const eventsData: Record<string, EventData> = {
         rules: [
             <span key="format"><strong>Format:</strong> Individual competition &nbsp;|&nbsp; <strong>Total Time:</strong> 8 Minutes &nbsp;|&nbsp; <strong>Rounds:</strong> 2</span>,
             <span key="round1"><strong>Round 1 — Preliminary (5 minutes):</strong> Participants type the given passage with the keyboard covered. Performance is assessed based on typing accuracy and speed.</span>,
-            <span key="round2"><strong>Round 2 — Final (3 minutes):</strong> Qualifying participants compete in the final round, typing a new passage independently with the keyboard covered.</span>,
+            <span key="round2"><strong>Round 2 — Final (3 minutes):</strong> Qualifying participants compete in the final round, typing a new passage independently with the keyboard covered. Participants cannot use backspace key during round 2.</span>,
             <span key="r1"><strong>Keyboard Cover:</strong> The keyboard will be covered with a shield so participants cannot see keys while typing. Lifting, shifting, or adjusting the cover is strictly prohibited.</span>,
             <span key="r2"><strong>Independent Effort:</strong> Participants must type the passage independently without any external assistance or notes.</span>,
             <span key="r3"><strong>Evaluation Criteria:</strong> Evaluated on Typing Speed (amount typed in allotted time), Accuracy (correctness of text), and Rule Compliance.</span>,
@@ -71,7 +71,7 @@ export const eventsData: Record<string, EventData> = {
         reportingTime: "9:30 AM",
         registrationFee: "100",
         feeLabel: "per team (2 members)",
-        prizePool: "3500",
+        prizePool: "3750",
         minTeamSize: 2,
         maxTeamSize: 2,
         qrCode: "/images/qr/website-60.jpeg",
@@ -93,7 +93,6 @@ export const eventsData: Record<string, EventData> = {
                     <span key="3">The website topic will be announced at the beginning of the competition.</span>,
                     <span key="4">Internet access will be available only for the first 15 minutes of the competition.</span>,
                     <span key="5">Participants may use HTML, CSS, JavaScript, and either Bootstrap or Tailwind CSS.</span>,
-                    <span key="6">Each participant/team must create their own website. Copying or unauthorized assistance is strictly prohibited.</span>,
                     <span key="7">The website must have a proper layout, readable content, and a user-friendly design.</span>,
                     <span key="8">The permitted AI tools are ChatGPT and Google Gemini.</span>,
                     <span key="9">Internet access and AI tool usage must comply with the organizers&apos; guidelines.</span>,
@@ -117,7 +116,7 @@ export const eventsData: Record<string, EventData> = {
             {
                 title: "Prize Pool & Registration",
                 items: [
-                    <span key="prize"><strong>Prize Pool:</strong> ₹3,500 total — First Prize: ₹2,000 | Second Prize: ₹1,000 | Third Prize: ₹500</span>,
+                    <span key="prize"><strong>Prize Pool:</strong> ₹3,750 total</span>,
                     <span key="fee"><strong>Registration Fee:</strong> ₹100 per team (2 members)</span>
                 ]
             }
@@ -131,7 +130,7 @@ export const eventsData: Record<string, EventData> = {
         image: "/images/events/aiprompt.jpg",
         icon: <Sparkles className="w-8 h-8 text-[#E7B878]" />,
         date: "October 30, 2026",
-        venue: "MCA Lab–1",
+        venue: "MCA Lab -3",
         reportingTime: "10:30 AM",
         registrationFee: "50",
         feeLabel: "per participant",
@@ -140,13 +139,14 @@ export const eventsData: Record<string, EventData> = {
         maxTeamSize: 1,
         qrCode: "/images/qr/ai-prompt-engineering.jpeg",
         rules: [
-            <span key="1"><strong>Participation:</strong> Individual event. Each participant competes independently and must create their own outputs.</span>,
-            <span key="2"><strong>Round 1 — AI Image Generation (10 mins):</strong> Generate an image using Gemini Nano Banana based on the task brief provided by the organizers. Judging will focus on creativity, originality, and alignment with the brief.</span>,
-            <span key="3"><strong>Round 2 — Advanced AI Image Creation (15 mins):</strong> Generate a second image using the AI image-generation tool specified by the organizers, based on a new task brief announced at the competition. Judging will focus on prompt effectiveness, creativity, visual quality, and relevance to the brief.</span>,
-            <span key="4"><strong>Permitted Tools:</strong> Use only tools and free features permitted by organizers. Paid/pro features are prohibited.</span>,
-            <span key="5"><strong>Time Limits & Submission:</strong> Each round must be strictly completed within the allotted time; work must be ready to present/submit when time is called.</span>,
-            <span key="6"><strong>Integrity:</strong> Copying another participant&apos;s prompts/work or using unauthorized external assistance will result in disqualification.</span>,
-            <span key="7"><strong>Judging Criteria:</strong> Evaluated on Creativity (originality), Prompt Effectiveness (clarity of communication to AI), Quality (finish and clarity), Relevance (brief fidelity), and Time Management.</span>,
+            <span key="1"><strong>Participation:</strong> Individual event. Each participant competes independently and must create their own output.</span>,
+            <span key="2"><strong>Round 1 — AI Image Recreation (10 mins):</strong> Participants will receive a reference image and must recreate it using Gemini Nano Banana.</span>,
+            <span key="3"><strong>Round 2 — Advanced AI Image Recreation (15 mins):</strong> Participants will receive a new, more challenging black-and-white reference image and must recreate the original colored image as closely as possible using Gemini Nano Banana.</span>,
+            <span key="4"><strong>Image Requirements:</strong> All outputs must have a 16:9 aspect ratio. Participants should accurately reproduce object positioning, proportions, composition, colors, lighting, background, and visual details using their imagination and prompt-engineering skills.</span>,
+            <span key="5"><strong>Permitted Tools:</strong> Use only Gemini Nano Banana through the organizer-approved access method and its permitted free features. Paid/Pro features, other AI image generators, and unauthorized image-editing tools are prohibited.</span>,
+            <span key="6"><strong>Time Limits & Submission:</strong> Each round must be completed within the allotted time. Participants must submit one final image per round before time is called.</span>,
+            <span key="7"><strong>Integrity:</strong> Copying another participant&apos;s prompts or work, or using unauthorized external assistance, will result in disqualification.</span>,
+            <span key="8"><strong>Judging Criteria:</strong> Images will be evaluated based on similarity to the original colored reference, object positioning, composition, color accuracy, detail, prompt effectiveness &amp; closeness, and time management.</span>,
             <span key="fee"><strong>Registration Fee:</strong> ₹50 per participant</span>,
             <span key="prize"><strong>Prize Pool:</strong> ₹3,500 total — First: ₹2,000 | Second: ₹1,000 | Third: ₹500</span>
         ]
@@ -159,7 +159,7 @@ export const eventsData: Record<string, EventData> = {
         image: "/images/events/quirkquest.jpeg",
         icon: <MessageSquare className="w-8 h-8 text-[#E7B878]" />,
         date: "October 30, 2026",
-        venue: "MCA S1A",
+        venue: "S3 MCA(A)",
         reportingTime: "10:30 AM",
         registrationFee: "100",
         feeLabel: "per team",
@@ -222,8 +222,9 @@ export const eventsData: Record<string, EventData> = {
         image: "/images/events/fun.png",
         icon: <Dices className="w-8 h-8 text-[#E7B878]" />,
         date: "October 30, 2026",
-        venue: "Smart Class Room",
-        reportingTime: "10:00 AM",
+        venue: "Near at PG Block Cafeteria",
+        reportingTime: "9:30 AM",
+        time: "9:30 AM onwards",
         registrationFee: "20",
         feeLabel: "per game (Pay on Spot)",
         prizePool: "3000",
@@ -251,7 +252,7 @@ export const eventsData: Record<string, EventData> = {
         image: "/images/events/spotchoreo.jpg",
         icon: <Music className="w-8 h-8 text-[#E7B878]" />,
         date: "October 30, 2026",
-        venue: "To Be Announced",
+        venue: "Chempazhanthy",
         reportingTime: "11:00 AM",
         registrationFee: "50",
         feeLabel: "per head",
@@ -262,9 +263,7 @@ export const eventsData: Record<string, EventData> = {
         rules: [
             <span key="1"><strong>Format:</strong> Solo (individual) event; group performances are not allowed.</span>,
             <span key="2"><strong>Song Allotment:</strong> Songs are randomly selected and allotted by the organizers on the spot; songs cannot be changed or exchanged.</span>,
-            <span key="3"><strong>Preparation Time:</strong> Each participant receives exactly 15 minutes of preparation time after the song is announced.</span>,
-            <span key="4"><strong>Duration:</strong> Performance duration must be a minimum of 2 minutes and a maximum of 3 minutes. Exceeding 3 minutes may attract penalties.</span>,
-            <span key="5"><strong>Style & Spontaneity:</strong> Any dance style or combination is allowed. Choreography must be created entirely during the 15-minute prep time (pre-planned routines are prohibited).</span>,
+            <span key="4"><strong>Duration:</strong> Performance duration must be a minimum of 2 minutes and a maximum of 3 minutes.</span>,
             <span key="6"><strong>Props:</strong> Basic props may be provided on the spot and can be incorporated creatively into the performance.</span>,
             <span key="7"><strong>Assistance Ban:</strong> Use of mobile phones, internet, or external assistance during preparation is strictly prohibited.</span>,
             <span key="8"><strong>Content Standards:</strong> Vulgar, offensive, or inappropriate moves, lyrics, or gestures are strictly barred.</span>,
@@ -338,6 +337,20 @@ export const eventsData: Record<string, EventData> = {
                     <span key="4">Teams must ensure that their reels meet the specified duration and format requirements.</span>,
                     <span key="5">No changes will be permitted after final submission unless authorized by the organizers.</span>,
                     <span key="6">Participants are responsible for ensuring that their submitted video files are playable.</span>
+                ]
+            },
+            {
+                title: "Disqualification",
+                items: [
+                    <span key="intro">A team may be disqualified for any of the following:</span>,
+                    <span key="d1">Submitting copied, plagiarized, or previously created content.</span>,
+                    <span key="d2">Using footage taken from the internet or other unauthorized sources.</span>,
+                    <span key="d3">Submitting offensive, vulgar, or inappropriate content.</span>,
+                    <span key="d4">Failing to follow the specified video format or duration requirements.</span>,
+                    <span key="d5">Submitting the reel after the deadline without permission.</span>,
+                    <span key="d6">Using another team’s footage without authorization.</span>,
+                    <span key="d7">Engaging in unfair practices or violating competition rules.</span>,
+                    <span key="d8">Disrespecting the organizers, judges, or other participants.</span>
                 ]
             },
             {
